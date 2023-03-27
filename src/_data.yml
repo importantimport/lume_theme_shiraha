@@ -1,0 +1,11 @@
+metas:
+  site: Shiraha
+  # lang: en
+  # generator: true
+  title: '=title'
+  description: '=summary'
+  image: '=image'
+
+shiraha:
+  colors:
+    prefix: '--md-sys-color'
