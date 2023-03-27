@@ -1,9 +1,11 @@
 import type { PageData, PageHelpers } from 'lume/core.ts'
 
-export default (data: PageData, { url }: PageHelpers) =>
+export default (data: PageData, _helpers: PageHelpers) =>
   `
     <title>${
-      data.metas?.site ? `${data.title} - ${data.metas.site}` : data.title
+      data.title
+        ? `${data.title} - ${data.metas!.site}`
+        : data.metas!.site
     }</title>
     <link
       rel="stylesheet"
@@ -16,5 +18,5 @@ export default (data: PageData, { url }: PageHelpers) =>
           </script>`
         : ''
     }
-    <script type="module" src="https://cdn.jsdelivr.net/npm/shiraha-colors/dist/index.js" />
+    <script type="module" src="https://cdn.jsdelivr.net/npm/shiraha-colors/dist/index.js"></script>
   `
