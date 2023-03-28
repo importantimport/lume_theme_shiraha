@@ -1,5 +1,5 @@
-import type { PageData, PageHelpers } from 'lume/core.ts'
+import type { PageData, PageHelpers } from '../types.ts'
 
 export const layout = 'layouts/root.tmpl.ts'
 export default ({ results }: PageData, _helpers: PageHelpers) =>
-  results?.map((result) => `<h2>${result.data.title}</h2>`)
+  results?.map((result) => `<h2>${result.data.title}</h2>`).join('')
