@@ -1,22 +1,14 @@
-import type { PageData, PageHelpers } from 'lume/core.ts'
+import type { PageData, PageHelpers } from '../types.ts'
+import meta from './head/meta.tmpl.ts'
+import shiraha from './head/shiraha.tmpl.ts'
 
-export default (data: PageData, _helpers: PageHelpers) =>
-  `
-    <title>${
-      data.title
-        ? `${data.title} - ${data.metas!.site}`
-        : data.metas!.site
-    }</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/shiraha/dist/shiraha.css"
-    />
-    ${
-      data.shiraha
-        ? `<script>
-            window.shiraha = ${JSON.stringify(data.shiraha)}
-          </script>`
-        : ''
-    }
-    <script type="module" src="https://cdn.jsdelivr.net/npm/shiraha-colors/dist/index.js"></script>
-  `
+export default (data: PageData, helpers: PageHelpers) =>
+  [
+    `<title>${
+      data.title ? `${data.title} - ${data.metas!.site}` : data.metas!.site
+    }</title>`,
+    meta(data, helpers),
+    shiraha(data, helpers),
+  ].join('')
+
+// <link rel="alternate" type="application/feed+json" href="/feed.json" />
