@@ -13,5 +13,11 @@
     "files": {
       "exclude": ["./_site", "./_bin"]
     }
+  },
+  "fmt": {
+    "options": {
+      "semiColons": false,
+      "singleQuote": true
+    }
   }
 }
