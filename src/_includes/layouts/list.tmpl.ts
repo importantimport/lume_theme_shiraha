@@ -6,10 +6,9 @@ export default ({ results }: PageData, helpers: PageHelpers) =>
   `<main class="h-feed">
     ${results
       ?.map(({ data }) =>
-        post[(data.layout?.slice(8, -8) as 'article') ?? 'article'](
-          data,
-          helpers
-        )
+        post[
+          data.layout ? (data.layout?.slice(8, -8) as 'article') : 'article'
+        ](data, helpers)
       )
       .join('')}
   </main>`
