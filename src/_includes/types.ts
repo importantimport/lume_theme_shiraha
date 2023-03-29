@@ -1,6 +1,12 @@
 import type { Page as LumePage, PageData as LumePageData } from 'lume/core.ts'
 
 export interface PageData extends LumePageData {
+  authors?: {
+    name: string
+    url?: string
+    avatar?: string
+  }[]
+
   shiraha?: {
     colors?: Record<string, unknown>
   }
