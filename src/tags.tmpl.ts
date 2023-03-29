@@ -5,7 +5,7 @@ export default function* ({ search, paginate }: PageData) {
   const tags = search.tags() as string[]
   for (const tag of tags) {
     const pages = search.pages(
-      `type!=root|list|tag '${tag}'`,
+      `type!=root|list '${tag}'`,
       'date=desc'
     ) as Page[]
     for (const page of paginate(pages, {
