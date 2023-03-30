@@ -7,4 +7,4 @@ export default ({ tags }: PageData, { url }: PageHelpers) =>
       href="${url(`/t/${tag}`)}"
       class="p-category">${tag}</a>
     </span>`
-  )
+  ).join('')
