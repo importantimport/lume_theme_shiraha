@@ -1,3 +1,6 @@
 {
-  "recommendations": ["denoland.vscode-deno", "runem.lit-plugin"]
+  "recommendations": [
+    "denoland.vscode-deno",
+    "ms-fast.fast-tagged-templates"
+  ]
 }
