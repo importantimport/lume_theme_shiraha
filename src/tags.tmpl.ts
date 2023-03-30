@@ -6,12 +6,14 @@ export default function* ({ search, paginate }: PageData) {
   const tags = search.tags() as string[]
   for (const tag of tags) {
     const pages = filter(
-      search.pages(`type!=root|list '${tag}'`, 'date=desc') as Page[]
+      search.pages(`type!=root|list '${tag}'`, 'date=desc') as Page[],
     )
-    for (const page of paginate(pages, {
-      url: (n) => (n === 1 ? `/t/${tag}/` : `/t/${tag}/${n}/`),
-      size: 5,
-    })) {
+    for (
+      const page of paginate(pages, {
+        url: (n) => (n === 1 ? `/t/${tag}/` : `/t/${tag}/${n}/`),
+        size: 5,
+      })
+    ) {
       yield page
     }
   }
