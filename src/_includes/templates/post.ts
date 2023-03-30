@@ -7,7 +7,7 @@ import tags from './post/tags.tmpl.ts'
 export const article = (data: PageData, helpers: PageHelpers) =>
   html`<article class="h-entry">
     <h2>
-      <a class="u-url p-name" href="${data.url}">${data.title}</a>
+      <a class="u-url p-name" href="${helpers.url(data.url)}">${data.title}</a>
     </h2>
     ${
     data.summary
