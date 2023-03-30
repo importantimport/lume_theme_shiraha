@@ -7,9 +7,7 @@ export default ({ authors }: PageData, { url }: PageHelpers) =>
       author.url
         ? html`<a
             class="h-card p-author u-url"
-            href="${url(author.url)}">
-            ${author.name}
-          </a>`
+            href="${url(author.url)}">${author.name}</a>`
         : html`<span class="h-card p-author">${author.name}</span>`
     )
     .join(', ')
