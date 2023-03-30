@@ -1,0 +1,9 @@
+name: Publish Lume Site on GitHub Pages
+
+on:
+  push:
+    branches: main
+
+jobs:
+  deploy:
+    uses: importantimport/.github/.github/workflows/lume-gh-pages.yml@main
