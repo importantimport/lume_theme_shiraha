@@ -1,12 +1,8 @@
 import type { Page as LumePage, PageData as LumePageData } from 'lume/core.ts'
+// import type { FFFFlavoredFrontmatter } from 'fff/fff.ts'
+import type { FFFFlavoredFrontmatter } from 'npm:fff-flavored-frontmatter'
 
-export interface PageData extends LumePageData {
-  authors?: {
-    name: string
-    url?: string
-    avatar?: string
-  }[]
-
+export type PageData = LumePageData & FFFFlavoredFrontmatter & {
   shiraha?: {
     colors?: Record<string, unknown>
   }

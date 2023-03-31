@@ -2,5 +2,6 @@
   "imports": {
     "lume/": "https://cdn.jsdelivr.net/gh/lumeland/lume@6f656a17b3ddc83c7acd603d87af3fc155b1a4bb/",
     "fs/": "https://deno.land/x/std@0.181.0/fs/",
+    "fff/": "https://deno.land/x/fff@0.5.1/"
   }
 }
