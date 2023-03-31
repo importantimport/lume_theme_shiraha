@@ -6,7 +6,7 @@ export default (
   { url }: PageHelpers,
 ) =>
   html`<nav>
-  <ul aria-label="Pagination">
+  <ul>
     ${
     pagination?.previous
       ? html`<li>
