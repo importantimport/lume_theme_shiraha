@@ -5,10 +5,10 @@
     "build": "deno task lume",
     "serve": "deno task lume -s"
   },
-  "compilerOptions": {
-    "jsx": "react-jsx",
-    "jsxImportSource": "npm:react"
-  },
+  // "compilerOptions": {
+  //   "jsx": "react-jsx",
+  //   "jsxImportSource": "npm:react"
+  // },
   "lint": {
     "files": {
       "exclude": ["./_site", "./_bin"]
