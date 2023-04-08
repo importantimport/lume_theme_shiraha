@@ -9,6 +9,11 @@ export default (data: PageData, _helpers: PageHelpers) =>
         html`<script>window.shiraha = ${JSON.stringify(data.shiraha)}</script>`,
       ]
       : []),
+    ...(data.shiraha.colors !== false
+      ? [
+        html`<script type="module" src="https://esm.run/shiraha-colors"></script>`,
+      ]
+      : []),
     html`<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/shiraha/dist/shiraha.css" />`,
     html`<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/shiraha/dist/themes/baseline.css" />`,
   ].join('')

@@ -1,2 +1,2 @@
 colors:
-  prefix: '--md-sys-color'
+  brightnessSuffix: true
