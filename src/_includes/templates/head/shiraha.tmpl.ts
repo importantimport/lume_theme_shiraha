@@ -15,7 +15,7 @@ export default (data: PageData, _helpers: PageHelpers) =>
       ]
       : []),
     html`<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/shiraha/dist/shiraha.css" />`,
-    html`<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/shiraha/dist/themes/baseline.css" />`,
+    html`<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/shiraha/dist/themes/yuki.css" />`,
   ].join('')
 
 // <script type="module" src="https://cdn.jsdelivr.net/npm/shiraha-colors@0.0.2/dist/index.js"></script>
