@@ -10,15 +10,23 @@ import shiraha from 'https://raw.githubusercontent.com/importantimport/lume_them
 export default lume().use(shiraha())
 ```
 
-## TODO
+## Features
 
-- [ ] [FFF Flavored Frontmatter](https://fff.js.org)
-- [ ] [404](https://github.com/lumeland/theme-simple-blog/blob/main/src/404.md)
-- [ ] [JSON Feed](https://github.com/lumeland/theme-simple-blog/blob/main/src/feed.tmpl.js)
-- [ ] [Archetypes](https://lume.land/docs/core/archetypes/)
-- [ ] [Relations](https://lume.land/plugins/relations/)
+### Color from featured image
 
-## About
+Automatically generate theme colors for your articles with featured image through [Shiraha Colors](https://github.com/importantimport/shiraha/tree/main/packages/shiraha-colors).
+
+### View Transitions [WIP]
+
+> Currently you need to enable `#view-transition-on-navigation` manually in chrome://flags.
+
+No need for additional Pjax or Hotwire Turbo, the most native page transition.
+
+### [FFF Flavored Frontmatter](https://fff.js.org)
+
+Powerful and versatile Frontmatter format. If you were using [Urara](https://github.com/importantimport/urara) before, your postings will not require much modification to migrate.
+
+<!-- ## About
 
 Just like [Gumori You](https://github.com/importantimport/gumori-you), but different.
 
@@ -29,7 +37,7 @@ So in this theme you can expect:
 - Dynamic theme colors based on [Shiraha Colors](https://github.com/importantimport/shiraha/tree/main/packages/shiraha-colors) / Material Color Utilities
 - Similar design to Material 3 but different
 - FFF Flavored Frontmatter experience
-- Long term maintenance like Urara
+- Long term maintenance like Urara -->
 
 ## License
 
