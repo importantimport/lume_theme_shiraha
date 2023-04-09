@@ -7,6 +7,11 @@ export type PageData = LumePageData & FFFFlavoredFrontmatter & {
     colors?: Record<string, unknown>
   }
 
+
+  site: {
+    icon?: string
+  }
+
   tmp?: {
     schemes?: {
       light: Record<string, unknown>
