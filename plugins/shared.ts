@@ -24,10 +24,6 @@ export default () => (site: Site) =>
     .use(date())
     .use(sitemap())
     // .use(nav())
-    //     .use(pagefind({ binary: { extended: true } }))
-    //     .preprocess(['.html'], page => {
-    //       page.data.tmp.schemes = {}
-    //     })
     .preprocess(['.md'], (page: Page) => {
       page.data.excerpt ??= (page.data.content as string).split(
         /<!--\s*more\s*-->/i,
