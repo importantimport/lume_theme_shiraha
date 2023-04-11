@@ -20,7 +20,7 @@ Automatically generate theme colors for your articles with featured image throug
 
 > Currently you need to enable `#view-transition-on-navigation` manually in chrome://flags.
 
-No need for additional Pjax or Hotwire Turbo, the most native page transition.
+No need for additional Swup or Pjax, the most native page transition.
 
 ### [FFF Flavored Frontmatter](https://fff.js.org)
 
