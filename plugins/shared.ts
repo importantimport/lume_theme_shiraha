@@ -3,7 +3,7 @@ import filterPages from 'lume/plugins/filter_pages.ts'
 import metas from 'lume/plugins/metas.ts'
 import date from 'lume/plugins/date.ts'
 import sitemap from 'lume/plugins/sitemap.ts'
-import nav from 'lume/plugins/nav.ts'
+// import nav from 'lume/plugins/nav.ts'
 // import pagefind from 'lume/plugins/pagefind.ts'
 
 export default () => (site: Site) =>
@@ -23,7 +23,7 @@ export default () => (site: Site) =>
     .use(metas())
     .use(date())
     .use(sitemap())
-    .use(nav())
+    // .use(nav())
     //     .use(pagefind({ binary: { extended: true } }))
     //     .preprocess(['.html'], page => {
     //       page.data.tmp.schemes = {}
