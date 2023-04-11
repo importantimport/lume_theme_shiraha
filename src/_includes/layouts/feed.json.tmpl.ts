@@ -7,7 +7,7 @@ export default (data: PageData, { md, url, htmlUrl }: PageHelpers) => JSON.strin
   home_page_url: url('', true),
   feed_url: url(data.url, true),
   next_url: url(data.pagination.next, true),
-  description: data.site.description,
+  description: data.site?.description,
   items: data.results?.map(({ data }) => ({
     ...toJSONFeedItem(data),
     id: url(data.url, true),

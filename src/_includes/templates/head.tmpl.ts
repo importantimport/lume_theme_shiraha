@@ -7,7 +7,7 @@ import shiraha from './head/shiraha.tmpl.ts'
 export default (data: PageData, helpers: PageHelpers) =>
   [
     html`<title>
-      ${data.title ? `${data.title} - ${data.metas!.site}` : data.metas!.site}
+      ${data.title ? `${data.title} - ${data.site.title}` : data.site.title}
     </title>`,
     link(data, helpers),
     meta(data, helpers),

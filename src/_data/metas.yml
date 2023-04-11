@@ -1,4 +1,4 @@
-site: Shiraha
+site: '=site.title'
 title: '=title'
 description: '=summary'
 image: '=image'
