@@ -8,10 +8,10 @@ export default (data: PageData, helpers: PageHelpers) =>
   html`<main class="h-feed">
     ${
     data.results
-      ?.map(({ data }) =>
+      ?.map(({ data: item }) =>
         post[
-          data.layout ? (data.layout?.slice(8, -8) as 'article') : 'article'
-        ](data, helpers)
+          item.layout ? (item.layout?.slice(8, -8) as 'article') : 'article'
+        ](item as PageData, helpers)
       )
       .join('')
   } ${data.pagination?.totalPages !== 1 ? pagination(data, helpers) : ''}
