@@ -11,7 +11,7 @@ export default (data: PageData, _helpers: PageHelpers) =>
       : []),
     ...(data.shiraha.colors !== false
       ? [
-        html`<script type="module" src="https://esm.run/shiraha-colors"></script>`,
+        html`<script type="module" src="https://esm.run/shiraha-colors" async></script>`,
       ]
       : []),
     html`<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/shiraha/dist/shiraha.css" />`,
