@@ -6,25 +6,6 @@
   "description": "Material 3-inspired Lume Blog Theme.",
   "items": [
     {
-      "title": "Unsplash Test 2",
-      "authors": [
-        {
-          "name": "Yuki",
-          "avatar": "https://ui-avatars.com/api/?name=Yuki&background=random&format=svg",
-          "url": "http://localhost:3000"
-        }
-      ],
-      "tags": [
-        "foobar"
-      ],
-      "_indieweb": {
-        "type": "article"
-      },
-      "id": "https://importantimport.github.io/lume_theme_shiraha/articles/colors-2/",
-      "url": "https://importantimport.github.io/lume_theme_shiraha/articles/colors-2/",
-      "content_html": "<p><img src=\"https://images.unsplash.com/photo-1656006456698-a981822e4d80?w=888\" alt=\"Unsplash\"></p>"
-    },
-    {
       "title": "Unsplash Test 1",
       "authors": [
         {
@@ -43,6 +24,25 @@
       "id": "https://importantimport.github.io/lume_theme_shiraha/articles/colors-1/",
       "url": "https://importantimport.github.io/lume_theme_shiraha/articles/colors-1/",
       "content_html": "<p><img src=\"https://images.unsplash.com/photo-1655998320246-ea729a27a34f?w=888\" alt=\"Unsplash\"></p>"
+    },
+    {
+      "title": "Unsplash Test 2",
+      "authors": [
+        {
+          "name": "Yuki",
+          "avatar": "https://ui-avatars.com/api/?name=Yuki&background=random&format=svg",
+          "url": "http://localhost:3000"
+        }
+      ],
+      "tags": [
+        "foobar"
+      ],
+      "_indieweb": {
+        "type": "article"
+      },
+      "id": "https://importantimport.github.io/lume_theme_shiraha/articles/colors-2/",
+      "url": "https://importantimport.github.io/lume_theme_shiraha/articles/colors-2/",
+      "content_html": "<p><img src=\"https://images.unsplash.com/photo-1656006456698-a981822e4d80?w=888\" alt=\"Unsplash\"></p>"
     },
     {
       "title": "Test",
