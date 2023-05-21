@@ -5,7 +5,13 @@ import paginationTmpl from '../templates/post/pagination.tmpl.ts'
 
 export const layout = 'layouts/root.tmpl.ts'
 export default (data: PageData, helpers: PageHelpers) =>
-  html`<main>
+  html`
+  <header>
+    <nav>
+      <a href="${helpers.url('/')}">←${data.site.title}</a>
+    </nav>
+  </header>
+  <main>
     ${data.content}
     ${
     paginationTmpl({
