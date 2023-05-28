@@ -6,7 +6,9 @@
   "description": "Material 3-inspired Lume Blog Theme.",
   "items": [
     {
-      "title": "Unsplash Test 1",
+      "_indieweb": {
+        "type": "article"
+      },
       "authors": [
         {
           "name": "Yuki",
@@ -18,15 +20,15 @@
         "foo",
         "bar"
       ],
-      "_indieweb": {
-        "type": "article"
-      },
+      "title": "Unsplash Test 1",
       "id": "https://importantimport.github.io/lume_theme_shiraha/articles/colors-1/",
       "url": "https://importantimport.github.io/lume_theme_shiraha/articles/colors-1/",
       "content_html": "<p><img src=\"https://images.unsplash.com/photo-1655998320246-ea729a27a34f?w=888\" alt=\"Unsplash\"></p>"
     },
     {
-      "title": "Unsplash Test 2",
+      "_indieweb": {
+        "type": "article"
+      },
       "authors": [
         {
           "name": "Yuki",
@@ -37,15 +39,15 @@
       "tags": [
         "foobar"
       ],
-      "_indieweb": {
-        "type": "article"
-      },
+      "title": "Unsplash Test 2",
       "id": "https://importantimport.github.io/lume_theme_shiraha/articles/colors-2/",
       "url": "https://importantimport.github.io/lume_theme_shiraha/articles/colors-2/",
       "content_html": "<p><img src=\"https://images.unsplash.com/photo-1656006456698-a981822e4d80?w=888\" alt=\"Unsplash\"></p>"
     },
     {
-      "title": "Test",
+      "_indieweb": {
+        "type": "article"
+      },
       "authors": [
         {
           "name": "藍+85CD",
@@ -60,9 +62,7 @@
       "tags": [
         "baz"
       ],
-      "_indieweb": {
-        "type": "article"
-      },
+      "title": "Test",
       "id": "https://importantimport.github.io/lume_theme_shiraha/articles/test/",
       "url": "https://importantimport.github.io/lume_theme_shiraha/articles/test/",
       "content_html": "<p>Hello, World!</p>"

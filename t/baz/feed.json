@@ -6,7 +6,9 @@
   "description": "Material 3-inspired Lume Blog Theme.",
   "items": [
     {
-      "title": "Test",
+      "_indieweb": {
+        "type": "article"
+      },
       "authors": [
         {
           "name": "藍+85CD",
@@ -21,9 +23,7 @@
       "tags": [
         "baz"
       ],
-      "_indieweb": {
-        "type": "article"
-      },
+      "title": "Test",
       "id": "https://importantimport.github.io/lume_theme_shiraha/articles/test/",
       "url": "https://importantimport.github.io/lume_theme_shiraha/articles/test/",
       "content_html": "<p>Hello, World!</p>"
