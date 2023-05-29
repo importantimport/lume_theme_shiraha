@@ -1,5 +1,6 @@
 ---
 title: Typography should be easy.
+layout: 'layouts/article.tmpl.ts'
 authors:
   - name: TailwindCSS
     avatar: https://avatars.githubusercontent.com/u/67109815
