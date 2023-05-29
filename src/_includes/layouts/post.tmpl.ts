@@ -6,11 +6,13 @@ import paginationTmpl from '../templates/post/pagination.tmpl.ts'
 export const layout = 'layouts/root.tmpl.ts'
 export default (data: PageData, helpers: PageHelpers) =>
   html`
-  <header>
-    <nav>
-      <a href="${helpers.url('/')}">←${data.site.title}</a>
-    </nav>
-  </header>
+  <nav>
+    <ol>
+      <li>
+        <a href="${helpers.url('/')}">${data.site.title}</a>
+      </li>
+    </ol>
+  </nav>
   <main>
     ${data.content}
     ${
