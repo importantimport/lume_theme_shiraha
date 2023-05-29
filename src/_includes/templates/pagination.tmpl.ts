@@ -10,7 +10,10 @@ export default (
     ${
     pagination?.previous
       ? html`<li>
-           <a href="${url(pagination.previous)}" rel="prev">← Previous</a>
+          <a href="${url(pagination.previous)}" rel="prev">
+            <span class="material-symbols-outlined">arrow_back</span>
+            Previous
+          </a>
          </li>`
       : ''
   } ${
@@ -22,7 +25,10 @@ export default (
   } ${
     pagination?.next
       ? html`<li>
-           <a href="${url(pagination.next)}" rel="next">Next →</a>
+          <a href="${url(pagination.next)}" rel="next">
+            Next
+            <span class="material-symbols-outlined">arrow_forward</span>
+          </a>
          </li>`
       : ''
   }
