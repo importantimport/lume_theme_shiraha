@@ -16,6 +16,8 @@
           "url": "https://github.com/tailwindlabs/tailwindcss-typography/blob/master/demo/components/MarkdownSample.mdx"
         }
       ],
+      "date_modified": "2023-05-29T08:02:13Z",
+      "date_published": "2023-05-29T08:02:13Z",
       "tags": [
         "TailwindCSS"
       ],
@@ -35,6 +37,8 @@
           "url": "http://localhost:3000"
         }
       ],
+      "date_modified": "2023-03-29T15:11:53Z",
+      "date_published": "2023-03-29T15:11:53Z",
       "tags": [
         "foo",
         "bar"
@@ -55,6 +59,8 @@
           "url": "http://localhost:3000"
         }
       ],
+      "date_modified": "2023-03-29T15:11:53Z",
+      "date_published": "2023-03-29T15:11:53Z",
       "tags": [
         "foobar"
       ],
@@ -73,11 +79,11 @@
           "url": "https://kwaa.dev"
         },
         {
-          "name": [
-            "DATA EXPUNGED"
-          ]
+          "name": "[DATA EXPUNGED]"
         }
       ],
+      "date_modified": "2023-03-27T13:31:59Z",
+      "date_published": "2023-03-27T13:31:59Z",
       "summary": "Hello, World!",
       "tags": [
         "baz"
