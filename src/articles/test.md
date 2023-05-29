@@ -7,6 +7,7 @@ authors:
   - name: [DATA EXPUNGED]
 tags:
   - baz
+summary: Hello, World!
 ---
 
 Hello, World!

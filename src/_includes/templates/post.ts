@@ -13,14 +13,16 @@ export const article = (data: PageData, helpers: PageHelpers) =>
         ${data.title}
       </a>
     </h2>
+    ${
+    data.summary
+      ? html`<p class="p-summary">
+        ${data.summary}
+      </p>`
+      : ''
+  }
     <p class="chip-container-auto">
       ${authors(data, helpers)}
       ${date(data, helpers)}
       ${tags(data, helpers)}
     </p>
-    ${
-    data.summary
-      ? html`<meta class="p-summary" content=${data.summary}></meta>`
-      : ''
-  }
   </article>`
