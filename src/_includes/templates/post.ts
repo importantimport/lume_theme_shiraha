@@ -23,6 +23,5 @@ export const article = (data: PageData, helpers: PageHelpers) =>
       : ''
   }
     </p>
-    <div class="e-content">${data.children}</div>
     ${tags(data, helpers)}
   </article>`
