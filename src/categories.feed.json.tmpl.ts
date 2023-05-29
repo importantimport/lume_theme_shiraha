@@ -3,17 +3,19 @@ import { query } from './_includes/utils/search.ts'
 
 export const layout = 'layouts/feed.json.tmpl.ts'
 export default function* ({ search, paginate }: PageData) {
-  const tags = search.values('tags') as string[]
-  for (const tag of tags) {
+  const categories = search.values('categories') as string[]
+  for (const category of categories) {
     const pages = search.pages(
-      [...query, `tags*=${tag}`],
+      [...query, `categories*=${category}`],
       'date=desc',
     ) as Page[]
     for (
       const page of paginate(pages, {
         url: (
           n,
-        ) => (n === 1 ? `/t/${tag}/feed.json` : `/t/${tag}/${n}/feed.json`),
+        ) => (n === 1
+          ? `/c/${category}/feed.json`
+          : `/t/${category}/${n}/feed.json`),
         size: 5,
       })
     ) {

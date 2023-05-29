@@ -12,19 +12,23 @@ export default lume().use(shiraha())
 
 ## Features
 
+### [FFF Flavored Frontmatter](https://fff.js.org)
+
+Powerful and versatile Frontmatter format. If you were using [Urara](https://github.com/importantimport/urara) before, your postings will not require much modification to migrate.
+
 ### Color from featured image
 
 Automatically generate theme colors for your articles with featured image through [Shiraha Colors](https://github.com/importantimport/shiraha/tree/main/packages/shiraha-colors).
+
+### JSON Feed in Everythere
+
+Provides a JSON Feed for each list: homepage, tags, categories... all can be subscribed via the reader.
 
 ### View Transitions [WIP]
 
 > Currently you need to enable `#view-transition-on-navigation` manually in chrome://flags.
 
 No need for additional Swup or Pjax, the most native page transition.
-
-### [FFF Flavored Frontmatter](https://fff.js.org)
-
-Powerful and versatile Frontmatter format. If you were using [Urara](https://github.com/importantimport/urara) before, your postings will not require much modification to migrate.
 
 <!-- ## About
 

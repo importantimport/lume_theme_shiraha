@@ -1,19 +1,17 @@
 import type { Page, PageData } from './_includes/types.ts'
 import { query } from './_includes/utils/search.ts'
 
-export const layout = 'layouts/feed.json.tmpl.ts'
+export const layout = 'layouts/list.tmpl.ts'
 export default function* ({ search, paginate }: PageData) {
-  const tags = search.values('tags') as string[]
-  for (const tag of tags) {
+  const categories = search.values('categories') as string[]
+  for (const category of categories) {
     const pages = search.pages(
-      [...query, `tags*=${tag}`],
+      [...query, `categories*=${category}`],
       'date=desc',
     ) as Page[]
     for (
       const page of paginate(pages, {
-        url: (
-          n,
-        ) => (n === 1 ? `/t/${tag}/feed.json` : `/t/${tag}/${n}/feed.json`),
+        url: (n) => (n === 1 ? `/c/${category}/` : `/t/${category}/${n}/`),
         size: 5,
       })
     ) {
