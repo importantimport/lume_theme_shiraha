@@ -14,7 +14,7 @@ export default ({ authors }: PageData, { url }: PageHelpers) =>
             ? html`<img src="${author.avatar}" alt="${author.name}" class="u-photo" />`
             : ''
         }
-          ${author.name}
+          <span>${author.name}</span>
         </a>
         `
         : html`
@@ -24,7 +24,7 @@ export default ({ authors }: PageData, { url }: PageHelpers) =>
             ? html`<img src="${author.avatar}" alt="${author.name}" class="u-photo" />`
             : ''
         }
-          ${author.name}
+          <span>${author.name}</span>
         </span>
         `
     )
