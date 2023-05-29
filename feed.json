@@ -78,6 +78,7 @@
           ]
         }
       ],
+      "summary": "Hello, World!",
       "tags": [
         "baz"
       ],
