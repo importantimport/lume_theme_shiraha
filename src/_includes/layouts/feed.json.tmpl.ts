@@ -4,7 +4,7 @@ import {
   toJSONFeedItem,
 } from 'npm:fff-flavored-frontmatter'
 
-export default (data: PageData, { md, url, htmlUrl }: PageHelpers) =>
+export default (data: PageData, { md, url, htmlUrl, date }: PageHelpers) =>
   JSON.stringify(
     {
       version: 'https://jsonfeed.org/version/1.1',
@@ -17,6 +17,14 @@ export default (data: PageData, { md, url, htmlUrl }: PageHelpers) =>
         ...toJSONFeedItem(item as FFFFlavoredFrontmatter),
         id: url(item.url, true),
         url: url(item.url, true),
+        date_published: date(
+          item.published ?? item.created ?? item.date,
+          'ATOM',
+        ),
+        date_modified: date(
+          item.updated ?? item.published ?? item.created ?? item.date,
+          'ATOM',
+        ),
         content_html: htmlUrl(md(item.content), true),
       })),
     },
