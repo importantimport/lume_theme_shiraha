@@ -8,6 +8,7 @@ export default (data: PageData, helpers: PageHelpers) =>
   html`
   <nav>
     <ol>
+      <span class="material-symbols-outlined">chevron_left</span>
       <li>
         <a href="${helpers.url('/')}">${data.site.title}</a>
       </li>
