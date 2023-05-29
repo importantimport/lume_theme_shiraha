@@ -11,7 +11,7 @@ export default ({ authors }: PageData, { url }: PageHelpers) =>
           href="${url(author.url)}">
           ${
           author.avatar
-            ? html`<img src="${author.avatar}" alt="${author.name}" class="h-photo" />`
+            ? html`<img src="${author.avatar}" alt="${author.name}" class="u-photo" />`
             : ''
         }
           ${author.name}
@@ -21,7 +21,7 @@ export default ({ authors }: PageData, { url }: PageHelpers) =>
         <span class="h-card p-author chip chip-tonal">
           ${
           author.avatar
-            ? html`<img src="${author.avatar}" alt="${author.name}" class="h-photo" />`
+            ? html`<img src="${author.avatar}" alt="${author.name}" class="u-photo" />`
             : ''
         }
           ${author.name}
