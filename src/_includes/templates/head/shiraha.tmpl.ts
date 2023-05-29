@@ -10,7 +10,8 @@ export default (data: PageData, _helpers: PageHelpers) =>
       : []),
     ...(data.shiraha?.colors
       ? [
-        html`<script type="module" src="https://esm.run/shiraha-colors" async></script>`,
+        // html`<script type="module" src="https://esm.run/shiraha-colors" async></script>`,
+        html`<script type="module" src="https://esm.run/shiraha-colors@latest" async></script>`,
       ]
       : []),
     // html`<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/shiraha/dist/shiraha.css" />`,
