@@ -13,7 +13,7 @@ export default (data: PageData, { md, url, htmlUrl, date }: PageHelpers) =>
       feed_url: url(data.url, true),
       next_url: url(data.pagination?.next, true) ?? undefined,
       description: data.site?.description,
-      items: data.results?.map(({ data: item }) => ({
+      items: data.results?.map(async ({ data: item }) => ({
         ...toJSONFeedItem(item as FFFFlavoredFrontmatter),
         id: url(item.url, true),
         url: url(item.url, true),
@@ -25,7 +25,7 @@ export default (data: PageData, { md, url, htmlUrl, date }: PageHelpers) =>
           item.updated ?? item.published ?? item.created ?? item.date,
           'ATOM',
         ),
-        content_html: htmlUrl(md(item.content), true),
+        content_html: htmlUrl(await md(item.content), true),
       })),
     },
     null,
