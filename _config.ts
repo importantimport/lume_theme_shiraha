@@ -1,6 +1,7 @@
 import lume from 'lume/mod.ts'
 // import { shiraha } from './mod.ts'
 import sharedPlugins from './plugins/shared.ts'
+import remarkPlugins from './plugins/remark.ts'
 // import multilanguage from 'lume/plugins/multilanguage.ts'
 
 export default lume({
@@ -8,6 +9,7 @@ export default lume({
   location: new URL('https://importantimport.github.io/lume_theme_shiraha/'),
 })
   .use(sharedPlugins())
+  .use(remarkPlugins())
 // .use(
 //   multilanguage({
 //     languages: ['en', 'zh', 'ja'],

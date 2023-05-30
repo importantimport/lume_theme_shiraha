@@ -1,8 +1,18 @@
 // remark plugins
-import remarkFFF from 'npm:remark-fff'
+import remarkFFF from 'https://esm.sh/remark-fff'
 // rehype plugins
-import rehypePrettyCode from 'npm:rehype-pretty-code'
+import rehypeStarryNight from 'https://esm.sh/@microflash/rehype-starry-night'
 
-export const remarkPlugins = [remarkFFF]
+export const remarkPlugins = [
+  [
+    remarkFFF,
+    {
+      presets: [],
+      target: 'nuxt',
+    },
+  ],
+]
 
-export const rehypePlugins = [rehypePrettyCode]
+export const rehypePlugins = [
+  rehypeStarryNight,
+]
