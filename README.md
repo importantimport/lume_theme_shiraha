@@ -1,5 +1,7 @@
 # Lume Theme Shiraha
 
+[![deno.land](https://img.shields.io/badge/available%20on-deno.land/x-black.svg?logo=deno)](https://deno.land/x/lume_theme_shiraha)
+
 ## Usage
 
 ```ts
