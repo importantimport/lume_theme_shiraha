@@ -5,27 +5,6 @@
   "feed_url": "https://importantimport.github.io/lume_theme_shiraha/t/bar/feed.json",
   "description": "Material 3-inspired Lume Blog Theme.",
   "items": [
-    {
-      "_indieweb": {
-        "type": "article"
-      },
-      "authors": [
-        {
-          "name": "Yuki",
-          "avatar": "https://ui-avatars.com/api/?name=Yuki&background=random&format=svg",
-          "url": "http://localhost:3000"
-        }
-      ],
-      "date_modified": "2023-03-29T15:11:53Z",
-      "date_published": "2023-03-29T15:11:53Z",
-      "tags": [
-        "foo",
-        "bar"
-      ],
-      "title": "Unsplash Test 1",
-      "id": "https://importantimport.github.io/lume_theme_shiraha/articles/colors-1/",
-      "url": "https://importantimport.github.io/lume_theme_shiraha/articles/colors-1/",
-      "content_html": "<p><img src=\"https://images.unsplash.com/photo-1655998320246-ea729a27a34f?w=888\" alt=\"Unsplash\"></p>"
-    }
+    {}
   ]
 }

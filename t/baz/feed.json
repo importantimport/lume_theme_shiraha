@@ -5,29 +5,6 @@
   "feed_url": "https://importantimport.github.io/lume_theme_shiraha/t/baz/feed.json",
   "description": "Material 3-inspired Lume Blog Theme.",
   "items": [
-    {
-      "_indieweb": {
-        "type": "article"
-      },
-      "authors": [
-        {
-          "name": "藍+85CD",
-          "url": "https://kwaa.dev"
-        },
-        {
-          "name": "[DATA EXPUNGED]"
-        }
-      ],
-      "date_modified": "2023-03-27T13:31:59Z",
-      "date_published": "2023-03-27T13:31:59Z",
-      "summary": "Hello, World!",
-      "tags": [
-        "baz"
-      ],
-      "title": "Test",
-      "id": "https://importantimport.github.io/lume_theme_shiraha/articles/test/",
-      "url": "https://importantimport.github.io/lume_theme_shiraha/articles/test/",
-      "content_html": "<p>Hello, World!</p>"
-    }
+    {}
   ]
 }
