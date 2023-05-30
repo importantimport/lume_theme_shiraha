@@ -5,6 +5,11 @@
 ```ts
 // _config.ts
 import lume from 'lume/mod.ts'
+
+// from deno.land/x (stable)
+import shiraha from 'https://deno.land/x/lume_theme_shiraha/mod.ts'
+
+// from github (latest)
 import shiraha from 'https://raw.githubusercontent.com/importantimport/lume_theme_shiraha/main/mod.ts'
 
 export default lume().use(shiraha())
@@ -29,19 +34,6 @@ Provides a JSON Feed for each list: homepage, tags, categories... all can be sub
 > Currently you need to enable `#view-transition-on-navigation` manually in chrome://flags.
 
 No need for additional Swup or Pjax, the most native page transition.
-
-<!-- ## About
-
-Just like [Gumori You](https://github.com/importantimport/gumori-you), but different.
-
-It is similar to [Gumori](https://github.com/importantimport/gumori)'s unstyled templates and is deeply bound to [Shiraha](https://github.com/importantimport/shiraha), a Classless CSS framework inspired by Material 3.
-
-So in this theme you can expect:
-
-- Dynamic theme colors based on [Shiraha Colors](https://github.com/importantimport/shiraha/tree/main/packages/shiraha-colors) / Material Color Utilities
-- Similar design to Material 3 but different
-- FFF Flavored Frontmatter experience
-- Long term maintenance like Urara -->
 
 ## License
 
