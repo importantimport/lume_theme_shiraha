@@ -18,7 +18,8 @@ export default (data: PageData, _helpers: PageHelpers) =>
     // html`<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/shiraha/dist/themes/yuki.css" />`,
     html`<link rel="stylesheet" href="https://shiraha.js.org/nightly/shiraha.css" />`,
     html`<link rel="stylesheet" href="https://shiraha.js.org/nightly/themes/baseline-tone-based.css" />`,
-    html`<link rel="stylesheet" href="https://shiraha.js.org/nightly/addons/chips.css" />`,
+    html`<link rel="stylesheet" href="https://shiraha.js.org/nightly/addons/chip.css" />`,
+    html`<link rel="stylesheet" href="https://shiraha.js.org/nightly/addons/code_starry-night.css" />`,
     html`<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />`,
     html`<link rel="stylesheet" href="https://esm.sh/@wooorm/starry-night@1/style/both.css">`,
   ].join('')
