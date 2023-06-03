@@ -1,6 +1,6 @@
 import type { Site } from 'lume/core.ts'
 // import { expandGlobSync } from 'fs/expand_glob.ts'
-import basePlugins from './plugins/base.ts'
+import sharedPlugins from './plugins/shared.ts'
 
 const src = (files: string[]) => (site: Site) =>
   files.forEach((file) =>
@@ -26,7 +26,7 @@ export const shirahaSrc = () => (site: Site) =>
   site.use(includes()).use(archetypes()).use(data()).use(pages())
 
 export const shiraha = () => (site: Site) =>
-  site.use(shirahaSrc()).use(basePlugins())
+  site.use(shirahaSrc()).use(sharedPlugins())
 
 // for (const file of expandGlobSync('./src/_includes/*.ts')) {
 //   console.log(file.path)
