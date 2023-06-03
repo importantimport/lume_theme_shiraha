@@ -12,7 +12,10 @@ import lume from 'lume/mod.ts'
 import shiraha from 'https://deno.land/x/lume_theme_shiraha/mod.ts'
 
 // from github (latest)
-import shiraha from 'https://raw.githubusercontent.com/importantimport/lume_theme_shiraha/main/mod.ts'
+// import shiraha from 'https://raw.githubusercontent.com/importantimport/lume_theme_shiraha/main/mod.ts'
+
+// from jsdelivr (latest)
+// import shiraha from 'https://cdn.jsdelivr.net/gh/importantimport/lume_theme_shiraha/mod.ts'
 
 export default lume().use(shiraha())
 ```
