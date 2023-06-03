@@ -13,6 +13,9 @@ import lume from 'lume/mod.ts'
 // from deno.land/x (stable)
 import shiraha from 'https://deno.land/x/lume_theme_shiraha/mod.ts'
 
+// from deno.land/x (specific version)
+// import shiraha from 'https://deno.land/x/lume_theme_shiraha@0.0.3/mod.ts'
+
 // from github (latest)
 // import shiraha from 'https://raw.githubusercontent.com/importantimport/lume_theme_shiraha/main/mod.ts'
 
