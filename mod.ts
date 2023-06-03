@@ -18,7 +18,7 @@ export const includes = () =>
 export const archetypes = () => src(['_archetypes/article.ts'])
 
 export const data = () =>
-  src(['_data/authors.yml', '_data/metas.yml', '_data/shiraha.yml'])
+  src(['_data/authors.yml', '_data/date.yml', '_data/metas.yml', '_data/shiraha.yml', '_data/site.yml'])
 
 export const pages = () => src(['index.tmpl.ts', 'tags.tmpl.ts'])
 
