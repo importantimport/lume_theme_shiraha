@@ -2,7 +2,7 @@ import type { PageData, PageHelpers } from '../types.ts'
 import {
   type FFFFlavoredFrontmatter,
   toJSONFeedItem,
-} from 'npm:fff-flavored-frontmatter'
+} from 'fff'
 
 export default async (
   data: PageData,

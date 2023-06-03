@@ -1,6 +1,6 @@
 import type { Page as LumePage, PageData as LumePageData } from 'lume/core.ts'
 // import type { FFFFlavoredFrontmatter } from 'fff/fff.ts'
-import type { FFFFlavoredFrontmatter } from 'npm:fff-flavored-frontmatter'
+import type { FFFFlavoredFrontmatter } from 'fff'
 
 export type PageData = LumePageData & FFFFlavoredFrontmatter & {
   shiraha?: {
