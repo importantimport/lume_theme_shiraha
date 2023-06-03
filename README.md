@@ -1,6 +1,8 @@
 # Lume Theme Shiraha
 
-[![deno.land](https://img.shields.io/badge/available%20on-deno.land/x-black.svg?logo=deno)](https://deno.land/x/lume_theme_shiraha)
+[![deno.land/x/lume_theme_shiraha](https://shield.deno.dev/x/lume_theme_shiraha)](https://deno.land/x/lume_theme_shiraha)
+![deno compatibility](https://shield.deno.dev/deno/^1.34)
+![fff](https://img.shields.io/badge/%F0%9F%8C%9F%20F%20F%20F-1.0-yellow?style=flat)
 
 ## Usage
 
