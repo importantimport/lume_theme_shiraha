@@ -3,6 +3,7 @@ import filterPages from 'lume/plugins/filter_pages.ts'
 import metas from 'lume/plugins/metas.ts'
 import date from 'lume/plugins/date.ts'
 import sitemap from 'lume/plugins/sitemap.ts'
+import minifyHTML from 'lume/plugins/minify_html.ts'
 // import nav from 'lume/plugins/nav.ts'
 // import pagefind from 'lume/plugins/pagefind.ts'
 
@@ -23,6 +24,7 @@ export default () => (site: Site) =>
     .use(metas())
     .use(date())
     .use(sitemap())
+    .use(minifyHTML({ extensions: ['.html', '.css', '.js'] }))
     // .use(nav())
     .preprocess(['.md'], (page: Page) => {
       page.data.excerpt ??= (page.data.content as string).split(
