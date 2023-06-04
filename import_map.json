@@ -2,6 +2,6 @@
   "imports": {
     "lume/": "https://deno.land/x/lume@v1.17.4/",
     "fs/": "https://deno.land/x/std@0.181.0/fs/",
-    "fff": "https://esm.sh/fff-flavored-frontmatter@1.0.0-alpha.1/"
+    "fff": "https://deno.land/x/fff@v1.0.1/mod.ts"
   }
 }
