@@ -4,6 +4,8 @@
 ![deno compatibility](https://shield.deno.dev/deno/^1.34)
 ![fff](https://img.shields.io/badge/%F0%9F%8C%9F%20F%20F%20F-1.0-yellow?style=flat)
 
+❄️ Material 3-inspired Lume Blog Theme.
+
 ## Usage
 
 ```ts
@@ -11,18 +13,18 @@
 import lume from 'lume/mod.ts'
 
 // from deno.land/x (stable)
-import shiraha from 'https://deno.land/x/lume_theme_shiraha/mod.ts'
+import lts from 'https://deno.land/x/lume_theme_shiraha/mod.ts'
 
 // from deno.land/x (specific version)
-// import shiraha from 'https://deno.land/x/lume_theme_shiraha@0.0.3/mod.ts'
+// import lts from 'https://deno.land/x/lume_theme_shiraha@0.0.3/mod.ts'
 
 // from github (latest)
-// import shiraha from 'https://raw.githubusercontent.com/importantimport/lume_theme_shiraha/main/mod.ts'
+// import lts from 'https://raw.githubusercontent.com/importantimport/lume_theme_shiraha/main/mod.ts'
 
 // from jsdelivr (latest)
-// import shiraha from 'https://cdn.jsdelivr.net/gh/importantimport/lume_theme_shiraha/mod.ts'
+// import lts from 'https://cdn.jsdelivr.net/gh/importantimport/lume_theme_shiraha/mod.ts'
 
-export default lume().use(shiraha())
+export default lume().use(lts())
 ```
 
 ## Features
