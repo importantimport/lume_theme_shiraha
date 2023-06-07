@@ -27,6 +27,7 @@ export default () => (site: Site) =>
     .use(sitemap())
     .use(partytown({
       config: {
+        debug: true,
         forward: ['shiraha'],
       },
     }))
