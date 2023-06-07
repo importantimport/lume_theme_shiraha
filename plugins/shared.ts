@@ -29,6 +29,13 @@ export default () => (site: Site) =>
       config: {
         debug: true,
         forward: ['shiraha'],
+        logCalls: true,
+        logGetters: true,
+        logSetters: true,
+        logImageRequests: true,
+        logMainAccess: true,
+        logScriptExecution: true,
+        logStackTraces: true,
       },
     }))
     .use(minifyHTML({ extensions: ['.html', '.css', '.js'] }))
