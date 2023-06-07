@@ -11,7 +11,7 @@ export type LumePartytownOptions = {
 }
 
 export default (options?: LumePartytownOptions) => (site: Site) => {
-  const snippet = partytownSnippet(options?.config)
+  const snippetText = partytownSnippet(options?.config)
 
   const libFiles = [
     'partytown.js',
@@ -47,7 +47,7 @@ export default (options?: LumePartytownOptions) => (site: Site) => {
 
   site.process(['.html'], (page) => {
     const script = page.document!.createElement('script')
-    script.innerHTML = snippet
+    script.textContent = snippetText
     page.document!.head.appendChild(script)
   })
 }
