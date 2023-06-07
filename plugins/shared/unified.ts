@@ -1,7 +1,7 @@
 // remark plugins
-import remarkFFF from 'npm:remark-fff'
+import remarkFFF from 'https://esm.sh/remark-fff'
 // rehype plugins
-import rehypeStarryNight from 'npm:@microflash/rehype-starry-night'
+import rehypeStarryNight from 'https://esm.sh/@microflash/rehype-starry-night'
 
 export const remarkPlugins = [
   [
