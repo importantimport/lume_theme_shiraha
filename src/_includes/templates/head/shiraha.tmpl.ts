@@ -12,7 +12,8 @@ export default (data: PageData, _helpers: PageHelpers) =>
       ? [
         // html`<script type="module" src="https://esm.run/shiraha-colors" async></script>`,
         // html`<script type="module" src="https://esm.run/shiraha-colors@latest" async></script>`,
-        html`<script type="text/partytown" src="https://esm.run/shiraha-colors@latest/nomodule" async></script>`,
+        // html`<script type="text/partytown" src="https://esm.run/shiraha-colors@latest/nomodule" async></script>`,
+        html`<script src="https://esm.run/shiraha-colors@latest/nomodule" async></script>`,
       ]
       : []),
     // html`<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/shiraha/dist/shiraha.css" />`,
