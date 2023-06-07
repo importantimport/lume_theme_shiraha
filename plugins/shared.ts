@@ -6,6 +6,7 @@ import sitemap from 'lume/plugins/sitemap.ts'
 import minifyHTML from 'lume/plugins/minify_html.ts'
 // import nav from 'lume/plugins/nav.ts'
 // import pagefind from 'lume/plugins/pagefind.ts'
+import partytown from './experimental/partytown/mod.ts'
 
 export default () => (site: Site) =>
   site
@@ -24,6 +25,11 @@ export default () => (site: Site) =>
     .use(metas())
     .use(date())
     .use(sitemap())
+    .use(partytown({
+      config: {
+        forward: ['shiraha'],
+      },
+    }))
     .use(minifyHTML({ extensions: ['.html', '.css', '.js'] }))
     // .use(nav())
     .preprocess(['.md'], (page: Page) => {
