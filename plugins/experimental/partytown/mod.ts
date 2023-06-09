@@ -13,7 +13,11 @@ export type LumePartytownOptions = {
 export default (options?: LumePartytownOptions) => (site: Site) => {
   const snippetText = partytownSnippet({
     ...options?.config,
-    lib: '/lume_theme_shiraha/~partytown/',
+    lib: new URL(
+      `.${options?.config?.lib ?? '/~partytown/'}`,
+      site.options.location,
+    )
+      .pathname,
   })
 
   const libFiles = [
