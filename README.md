@@ -33,6 +33,10 @@ export default lume().use(lts())
 
 Powerful and versatile Frontmatter format. If you were using [Urara](https://github.com/importantimport/urara) before, your postings will not require much modification to migrate.
 
+### Material Design 3 with slight differences
+
+This theme gets the Material Design-like styles from [Shiraha](https://github.com/importantimport/shiraha/tree/main/packages/shiraha).
+
 ### Color from featured image
 
 Automatically generate theme colors for your articles with featured image through [Shiraha Colors](https://github.com/importantimport/shiraha/tree/main/packages/shiraha-colors).
