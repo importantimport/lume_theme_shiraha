@@ -13,7 +13,7 @@ export default (
     ${
       previous
         ? html`<li>
-           <a href="${
+           <a role="button" href="${
           url(previous.data.url)
         }" rel="prev">← ${previous.data.title}</a>
          </li>`
@@ -21,7 +21,9 @@ export default (
     } ${
       next
         ? html`<li>
-           <a href="${url(next.data.url)}" rel="next">${next.data.title} →</a>
+           <a role="button" href="${
+          url(next.data.url)
+        }" rel="next">${next.data.title} →</a>
          </li>`
         : ''
     }
