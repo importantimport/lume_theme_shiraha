@@ -21,9 +21,6 @@ import lts from 'https://deno.land/x/lume_theme_shiraha/mod.ts'
 // from github (latest)
 // import lts from 'https://raw.githubusercontent.com/importantimport/lume_theme_shiraha/main/mod.ts'
 
-// from jsdelivr (latest)
-// import lts from 'https://cdn.jsdelivr.net/gh/importantimport/lume_theme_shiraha/mod.ts'
-
 export default lume().use(lts())
 ```
 
@@ -43,7 +40,13 @@ Automatically generate theme colors for your articles with featured image throug
 
 ### JSON Feed in Everythere
 
-Provides a JSON Feed for each list: homepage, tags, categories... all can be subscribed via the reader.
+Provides a JSON Feed for each list: home, tags, categories... all can be subscribed via the reader.
+
+### All-in-One, or just templates.
+
+Lume Theme Shiraha has a complete set-up for you, including Lume and Remark / Rehype plugin. You can also use just the templates if you wish to customise them yourself.
+
+All templates use `.tmpl.ts` and have no additional dependencies.
 
 ### View Transitions [WIP]
 
