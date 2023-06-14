@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://importantimport.github.io/lume_theme_shiraha/</loc>
-    <lastmod>2023-06-11T14:35:55.004Z</lastmod>
+    <lastmod>2023-06-14T14:18:16.788Z</lastmod>
   </url>
   <url>
     <loc>https://importantimport.github.io/lume_theme_shiraha/404.html</loc>
@@ -11,6 +11,14 @@
   <url>
     <loc>https://importantimport.github.io/lume_theme_shiraha/articles/getting-started/</loc>
     <lastmod>2023-05-30T14:30:26.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://importantimport.github.io/lume_theme_shiraha/articles/part-1-installation/</loc>
+    <lastmod>2023-05-30T14:30:26.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://importantimport.github.io/lume_theme_shiraha/articles/part-2-writing/</loc>
+    <lastmod>2023-06-14T14:17:25.000Z</lastmod>
   </url>
   <url>
     <loc>https://importantimport.github.io/lume_theme_shiraha/articles/tailwind-typography-example/</loc>
@@ -22,10 +30,10 @@
   </url>
   <url>
     <loc>https://importantimport.github.io/lume_theme_shiraha/t/Lume_Theme_Shiraha/</loc>
-    <lastmod>2023-06-11T14:35:55.003Z</lastmod>
+    <lastmod>2023-06-14T14:18:16.788Z</lastmod>
   </url>
   <url>
     <loc>https://importantimport.github.io/lume_theme_shiraha/t/TailwindCSS/</loc>
-    <lastmod>2023-06-11T14:35:55.003Z</lastmod>
+    <lastmod>2023-06-14T14:18:16.787Z</lastmod>
   </url>
 </urlset>
