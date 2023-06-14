@@ -1,4 +1,5 @@
 import type { Page, Site } from 'lume/core.ts'
+import { getDate } from 'lume/core/source.ts'
 import filterPages from 'lume/plugins/filter_pages.ts'
 import metas from 'lume/plugins/metas.ts'
 import date from 'lume/plugins/date.ts'
@@ -44,4 +45,5 @@ export default () => (site: Site) =>
       page.data.excerpt ??= (page.data.content as string).split(
         /<!--\s*more\s*-->/i,
       )[0]
+      page.data.updated = getDate(page.data.updated, page.src?.entry)
     })
