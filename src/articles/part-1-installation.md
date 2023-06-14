@@ -1,5 +1,5 @@
 ---
-title: Gettings Started
+title: 'Part 1: Installation'
 layout: 'layouts/article.tmpl.ts'
 authors:
   - name: 藍+85CD
@@ -9,11 +9,20 @@ tags:
   - 'Lume_Theme_Shiraha'
 ---
 
-[![Photo by Kelly Sikkema](https://images.unsplash.com/photo-1478265409131-1f65c88f965c?w=720)](https://unsplash.com/photos/hSPVuakrJqs)
+## Setup Deno & Lume
 
-Welcome! Here is the demo and documentation for Lume Theme Shiraha.
+As this is a Lume theme, please follow the [Deno installation instructions](https://deno.com/manual@v1.34.2/getting_started/installation) and [Lume documentation](https://lume.land/docs/overview/installation/) to install them first.
 
-## Get Started
+## Install Lume Theme Shiraha
 
-- [Part 1: Installation](../part-1-installation/)
-- [Part 2: Writing](../part-2-writing/)
+Now that you should have a basic Lume blog, modify `_config.ts` to use the Shiraha theme:
+
+```diff caption='_config.ts'
+import lume from 'lume/mod.ts'
++ import lts from 'https://deno.land/x/lume_theme_shiraha/mod.ts'
+
+- const site = lume()
++ const site = lume().use(lts())
+
+export default site
+```
