@@ -16,6 +16,27 @@
           "url": "https://kwaa.dev"
         }
       ],
+      "date_modified": "2089-06-04T00:00:00Z",
+      "date_published": "2089-06-04T00:00:00Z",
+      "tags": [
+        "Lume_Theme_Shiraha"
+      ],
+      "title": "Gettings Started",
+      "id": "https://importantimport.github.io/lume_theme_shiraha/articles/getting-started/",
+      "url": "https://importantimport.github.io/lume_theme_shiraha/articles/getting-started/",
+      "content_html": "<p><a href=\"https://unsplash.com/photos/hSPVuakrJqs\"><img src=\"https://images.unsplash.com/photo-1478265409131-1f65c88f965c?w=720\" alt=\"Photo by Kelly Sikkema\"></a></p>\n<p>Welcome! Here is the demo and documentation for Lume Theme Shiraha.</p>\n<ul>\n<li><a href=\"../part-1-installation/\">Part 1: Installation</a></li>\n<li><a href=\"../part-2-writing/\">Part 2: Writing</a></li>\n</ul>"
+    },
+    {
+      "_indieweb": {
+        "type": "article"
+      },
+      "authors": [
+        {
+          "name": "藍+85CD",
+          "avatar": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAAUVBMVEUICz3W29T///+5wccaSXtErbk4ODjz8OZVVVX/7MkVFRXtrpqTJiVHKxPZOjr/+/T/07d1TCNgERn59vb//OPSzMzuuwKZne20srL0mIyWGwVwQ6mkAAAA9UlEQVQoz1WOCbLDIAxDMQYngMna9i/3P2hlGjpEMB7QQzbukoeIrLqbPDHDRCV/91d2TPCDAxn8iWOkCSIGGcF/oBWEkBqB9Z5onazcAfrjPa+WAhlGEMPBTtxBCMEAAzG7lBwBwLzAZL3cT0gp4MEAiG2d8fGITDdA1ixBWweXT8eyKG/bptSB31tARBdbxwDshzLPs/6pHgOoTAYkI/D85Q6ir5UZgSwA51MYIMboopEGsqrKmRl+B7uI5Jr1pTNO8L8AAQBU2/6bKMUCGP/CD0RKaTPgJ6js+aPNLggZKCWVKjKbBOcC0Fr5WmqFfxHfhrwBRawLyITR1qYAAAAASUVORK5CYII=",
+          "url": "https://kwaa.dev"
+        }
+      ],
       "date_modified": "2023-06-14T14:17:25Z",
       "date_published": "2023-06-14T14:17:25Z",
       "tags": [
@@ -46,27 +67,6 @@
       "id": "https://importantimport.github.io/lume_theme_shiraha/articles/part-1-installation/",
       "url": "https://importantimport.github.io/lume_theme_shiraha/articles/part-1-installation/",
       "content_html": "<h2>Setup Deno &#x26; Lume</h2>\n<p>As this is a Lume theme, please follow the <a href=\"https://deno.com/manual@v1.34.2/getting_started/installation\">Deno installation instructions</a> and <a href=\"https://lume.land/docs/overview/installation/\">Lume documentation</a> to install them first.</p>\n<h2>Install Lume Theme Shiraha</h2>\n<p>Now that you should have a basic Lume blog, modify <code>_config.ts</code> to use the Shiraha theme:</p>\n<div class=\"highlight highlight-diff\"><div class=\"highlight-header\"><div class=\"highlight-language\">diff</div><div class=\"highlight-caption\">_config.ts</div></div><pre><code tabindex=\"0\"><span class=\"line\"><span class=\"line-number\" aria-hidden=\"true\">1</span>import lume from 'lume/mod.ts'</span>\n<span class=\"line\"><span class=\"line-number\" aria-hidden=\"true\">2</span><span class=\"pl-mi1\">+ import lts from 'https://deno.land/x/lume_theme_shiraha/mod.ts'</span></span>\n<span class=\"line\"><span class=\"line-number\" aria-hidden=\"true\">3</span></span>\n<span class=\"line\"><span class=\"line-number\" aria-hidden=\"true\">4</span><span class=\"pl-md\">- const site = lume()</span></span>\n<span class=\"line\"><span class=\"line-number\" aria-hidden=\"true\">5</span><span class=\"pl-mi1\">+ const site = lume().use(lts())</span></span>\n<span class=\"line\"><span class=\"line-number\" aria-hidden=\"true\">6</span></span>\n<span class=\"line\"><span class=\"line-number\" aria-hidden=\"true\">7</span>export default site</span>\n</code></pre></div>"
-    },
-    {
-      "_indieweb": {
-        "type": "article"
-      },
-      "authors": [
-        {
-          "name": "藍+85CD",
-          "avatar": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAAUVBMVEUICz3W29T///+5wccaSXtErbk4ODjz8OZVVVX/7MkVFRXtrpqTJiVHKxPZOjr/+/T/07d1TCNgERn59vb//OPSzMzuuwKZne20srL0mIyWGwVwQ6mkAAAA9UlEQVQoz1WOCbLDIAxDMQYngMna9i/3P2hlGjpEMB7QQzbukoeIrLqbPDHDRCV/91d2TPCDAxn8iWOkCSIGGcF/oBWEkBqB9Z5onazcAfrjPa+WAhlGEMPBTtxBCMEAAzG7lBwBwLzAZL3cT0gp4MEAiG2d8fGITDdA1ixBWweXT8eyKG/bptSB31tARBdbxwDshzLPs/6pHgOoTAYkI/D85Q6ir5UZgSwA51MYIMboopEGsqrKmRl+B7uI5Jr1pTNO8L8AAQBU2/6bKMUCGP/CD0RKaTPgJ6js+aPNLggZKCWVKjKbBOcC0Fr5WmqFfxHfhrwBRawLyITR1qYAAAAASUVORK5CYII=",
-          "url": "https://kwaa.dev"
-        }
-      ],
-      "date_modified": "2023-05-30T14:30:26Z",
-      "date_published": "2023-05-30T14:30:26Z",
-      "tags": [
-        "Lume_Theme_Shiraha"
-      ],
-      "title": "Gettings Started",
-      "id": "https://importantimport.github.io/lume_theme_shiraha/articles/getting-started/",
-      "url": "https://importantimport.github.io/lume_theme_shiraha/articles/getting-started/",
-      "content_html": "<p><a href=\"https://unsplash.com/photos/hSPVuakrJqs\"><img src=\"https://images.unsplash.com/photo-1478265409131-1f65c88f965c?w=720\" alt=\"Photo by Kelly Sikkema\"></a></p>\n<p>Welcome! Here is the demo and documentation for Lume Theme Shiraha.</p>\n<h2>Get Started</h2>\n<ul>\n<li><a href=\"../part-1-installation/\">Part 1: Installation</a></li>\n<li><a href=\"../part-2-writing/\">Part 2: Writing</a></li>\n</ul>"
     }
   ]
 }
