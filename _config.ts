@@ -6,7 +6,7 @@ import remarkPlugins from './plugins/remark.ts'
 
 export default lume({
   src: './src',
-  location: new URL('https://importantimport.github.io/lume_theme_shiraha/'),
+  location: new URL('https://lume.shiraha.js.org/'),
 })
   .use(sharedPlugins())
   .use(remarkPlugins())
