@@ -1,8 +1,8 @@
 {
   "version": "https://jsonfeed.org/version/1.1",
   "title": "Shiraha",
-  "home_page_url": "https://importantimport.github.io/lume_theme_shiraha/",
-  "feed_url": "https://importantimport.github.io/lume_theme_shiraha/t/Lume_Theme_Shiraha/feed.json",
+  "home_page_url": "https://lume.shiraha.js.org/",
+  "feed_url": "https://lume.shiraha.js.org/t/Lume_Theme_Shiraha/feed.json",
   "description": "Material 3-inspired Lume Blog Theme.",
   "items": [
     {
@@ -22,8 +22,8 @@
         "Lume_Theme_Shiraha"
       ],
       "title": "Gettings Started",
-      "id": "https://importantimport.github.io/lume_theme_shiraha/articles/getting-started/",
-      "url": "https://importantimport.github.io/lume_theme_shiraha/articles/getting-started/",
+      "id": "https://lume.shiraha.js.org/articles/getting-started/",
+      "url": "https://lume.shiraha.js.org/articles/getting-started/",
       "content_html": "<p><a href=\"https://unsplash.com/photos/hSPVuakrJqs\"><img src=\"https://images.unsplash.com/photo-1478265409131-1f65c88f965c?w=720\" alt=\"Photo by Kelly Sikkema\"></a></p>\n<p>Welcome! Here is the demo and documentation for Lume Theme Shiraha.</p>\n<ul>\n<li><a href=\"../part-1-installation/\">Part 1: Installation</a></li>\n<li><a href=\"../part-2-writing/\">Part 2: Writing</a></li>\n</ul>"
     },
     {
@@ -43,8 +43,8 @@
         "Lume_Theme_Shiraha"
       ],
       "title": "Part 2: Writing",
-      "id": "https://importantimport.github.io/lume_theme_shiraha/articles/part-2-writing/",
-      "url": "https://importantimport.github.io/lume_theme_shiraha/articles/part-2-writing/",
+      "id": "https://lume.shiraha.js.org/articles/part-2-writing/",
+      "url": "https://lume.shiraha.js.org/articles/part-2-writing/",
       "content_html": "<p>It's time to create your first article!</p>\n<p>Here I use <a href=\"https://lume.land/docs/core/archetypes/#run-archetypes\">lume cli</a> to create the posts, you can also create the files manually.</p>\n<div class=\"highlight highlight-bash\"><div class=\"highlight-header\"><div class=\"highlight-language\">bash</div></div><pre><code tabindex=\"0\"><span class=\"line\">deno task lume new article my-first-article</span>\n</code></pre></div>\n<p>This will generate <code>./articles/my-first-article.md</code>:</p>\n<div class=\"highlight highlight-yaml\"><div class=\"highlight-header\"><div class=\"highlight-language\">yaml</div><div class=\"highlight-caption\">./articles/my-first-article.md</div></div><pre><code tabindex=\"0\"><span class=\"line\"><span class=\"line-number\" aria-hidden=\"true\">1</span>---</span>\n<span class=\"line\"><span class=\"line-number\" aria-hidden=\"true\">2</span><span class=\"pl-ent\">title</span>: <span class=\"pl-s\">my-first-article</span></span>\n<span class=\"line\"><span class=\"line-number\" aria-hidden=\"true\">3</span><span class=\"pl-ent\">layout</span>: <span class=\"pl-s\">layouts/article.tmpl.ts</span></span>\n<span class=\"line\"><span class=\"line-number\" aria-hidden=\"true\">4</span>---</span>\n</code></pre></div>\n<p>I assume you already know what Frontmatter is.</p>\n<p>Here you can use the <a href=\"https://lume.land/docs/creating-pages/page-data/#standard-variables\">Lume Standard Variables</a> and part of the <a href=\"https://fff.js.org/version/1.0.html\">FFF Flavored Frontmatter</a> (depending on the progress of theme development, most will be supported eventually)</p>\n<p>For example, to change the generated directory without changing the filename:</p>\n<div class=\"highlight highlight-diff\"><div class=\"highlight-header\"><div class=\"highlight-language\">diff</div><div class=\"highlight-caption\">./articles/my-first-article.md</div></div><pre><code tabindex=\"0\"><span class=\"line\"><span class=\"line-number\" aria-hidden=\"true\">1</span><span class=\"pl-ms\">---</span></span>\n<span class=\"line\"><span class=\"line-number\" aria-hidden=\"true\">2</span>title: my-first-article</span>\n<span class=\"line\"><span class=\"line-number\" aria-hidden=\"true\">3</span>layout: layouts/article.tmpl.ts</span>\n<span class=\"line\"><span class=\"line-number\" aria-hidden=\"true\">4</span><span class=\"pl-mi1\">+ url: /articles/my-second-article/index.html</span></span>\n<span class=\"line\"><span class=\"line-number\" aria-hidden=\"true\">5</span><span class=\"pl-ms\">---</span></span>\n</code></pre></div>\n<p>That's it!</p>"
     },
     {
@@ -64,8 +64,8 @@
         "Lume_Theme_Shiraha"
       ],
       "title": "Part 1: Installation",
-      "id": "https://importantimport.github.io/lume_theme_shiraha/articles/part-1-installation/",
-      "url": "https://importantimport.github.io/lume_theme_shiraha/articles/part-1-installation/",
+      "id": "https://lume.shiraha.js.org/articles/part-1-installation/",
+      "url": "https://lume.shiraha.js.org/articles/part-1-installation/",
       "content_html": "<h2>Setup Deno &#x26; Lume</h2>\n<p>As this is a Lume theme, please follow the <a href=\"https://deno.com/manual@v1.34.2/getting_started/installation\">Deno installation instructions</a> and <a href=\"https://lume.land/docs/overview/installation/\">Lume documentation</a> to install them first.</p>\n<h2>Install Lume Theme Shiraha</h2>\n<p>Now that you should have a basic Lume blog, modify <code>_config.ts</code> to use the Shiraha theme:</p>\n<div class=\"highlight highlight-diff\"><div class=\"highlight-header\"><div class=\"highlight-language\">diff</div><div class=\"highlight-caption\">_config.ts</div></div><pre><code tabindex=\"0\"><span class=\"line\"><span class=\"line-number\" aria-hidden=\"true\">1</span>import lume from 'lume/mod.ts'</span>\n<span class=\"line\"><span class=\"line-number\" aria-hidden=\"true\">2</span><span class=\"pl-mi1\">+ import lts from 'https://deno.land/x/lume_theme_shiraha/mod.ts'</span></span>\n<span class=\"line\"><span class=\"line-number\" aria-hidden=\"true\">3</span></span>\n<span class=\"line\"><span class=\"line-number\" aria-hidden=\"true\">4</span><span class=\"pl-md\">- const site = lume()</span></span>\n<span class=\"line\"><span class=\"line-number\" aria-hidden=\"true\">5</span><span class=\"pl-mi1\">+ const site = lume().use(lts())</span></span>\n<span class=\"line\"><span class=\"line-number\" aria-hidden=\"true\">6</span></span>\n<span class=\"line\"><span class=\"line-number\" aria-hidden=\"true\">7</span>export default site</span>\n</code></pre></div>"
     }
   ]

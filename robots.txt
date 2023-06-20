@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://importantimport.github.io/lume_theme_shiraha/sitemap.xml
+Sitemap: https://lume.shiraha.js.org/sitemap.xml
