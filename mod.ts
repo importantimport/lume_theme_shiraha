@@ -1,5 +1,4 @@
 import type { Site } from 'lume/core.ts'
-// import { expandGlobSync } from 'fs/expand_glob.ts'
 import sharedPlugins from './plugins/shared.ts'
 import remarkPlugins from './plugins/remark.ts'
 
@@ -44,11 +43,6 @@ export const templates = () => (site: Site) =>
 
 export const lts = () => (site: Site) =>
   site.use(templates()).use(sharedPlugins()).use(remarkPlugins())
-
-// for (const file of expandGlobSync('./src/_includes/*.ts')) {
-//   console.log(file.path)
-//   site.remoteFile(file.path.slice(6), import.meta.resolve(file.path))
-// }
 
 // --- templates ---
 // archetypes (_archetypes)
