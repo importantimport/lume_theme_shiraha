@@ -1,8 +1,5 @@
 import type { PageData, PageHelpers } from '../types.ts'
-import {
-  type FFFFlavoredFrontmatter,
-  toJSONFeedItem,
-} from 'fff'
+// import { type FFFFlavoredFrontmatter, toJSONFeedItem } from 'fff'
 
 export default async (
   data: PageData,
@@ -16,20 +13,23 @@ export default async (
       feed_url: url(data.url, true),
       next_url: url(data.pagination?.next, true) ?? undefined,
       description: data.site?.description,
-      items: await Promise.all(data.results?.map(async ({ data: item }) => ({
-        ...toJSONFeedItem(item as FFFFlavoredFrontmatter),
-        id: url(item.url, true),
-        url: url(item.url, true),
-        date_published: date(
-          item.published ?? item.created ?? item.date,
-          'ATOM',
-        ),
-        date_modified: date(
-          item.updated ?? item.published ?? item.created ?? item.date,
-          'ATOM',
-        ),
-        content_html: htmlUrl(await md(item.content), true),
-      }))),
+      items: await Promise.all(
+        data.results?.map(async ({ data: item }) => ({
+          // TOOD: fix toJSONFeedItem
+          // ...toJSONFeedItem(item as FFFFlavoredFrontmatter),
+          id: url(item.url, true),
+          url: url(item.url, true),
+          date_published: date(
+            item.published ?? item.created ?? item.date,
+            'ATOM',
+          ),
+          date_modified: date(
+            item.updated ?? item.published ?? item.created ?? item.date,
+            'ATOM',
+          ),
+          content_html: htmlUrl(await md(item.content), true),
+        })) as object[],
+      ),
     },
     null,
     2,
