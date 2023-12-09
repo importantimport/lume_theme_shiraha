@@ -1,15 +1,14 @@
-import type { Page, Site } from 'lume/core.ts'
-import { getDate } from 'lume/core/source.ts'
+// import { getGitDate } from 'lume/core/utils/date.ts'
 import filterPages from 'lume/plugins/filter_pages.ts'
 import metas from 'lume/plugins/metas.ts'
-import date from 'lume/plugins/date.ts'
+// import date from 'lume/plugins/date.ts'
 import sitemap from 'lume/plugins/sitemap.ts'
-import minifyHTML from 'lume/plugins/minify_html.ts'
+// import minifyHTML from 'lume/plugins/minify_html.ts'
 // import nav from 'lume/plugins/nav.ts'
 // import pagefind from 'lume/plugins/pagefind.ts'
-import partytown from './experimental/partytown/mod.ts'
+import unocss from 'lume/plugins/unocss.ts'
 
-export default () => (site: Site) =>
+export default () => (site: Lume.Site) =>
   site
     .use(
       filterPages({
@@ -24,26 +23,26 @@ export default () => (site: Site) =>
       }),
     )
     .use(metas())
-    .use(date())
+    // .use(date())
     .use(sitemap())
-    .use(partytown({
-      config: {
-        debug: true,
-        forward: ['shiraha'],
-        logCalls: true,
-        logGetters: true,
-        logSetters: true,
-        logImageRequests: true,
-        logMainAccess: true,
-        logScriptExecution: true,
-        logStackTraces: true,
-      },
+    .use(unocss({
+      // config: {
+      //   preflights: undefined,
+      // },
+      cssFile: '/uno.css',
+      // cssFileTransformers: [
+      //   transformerVariantGroup(),
+      //   transformerDirectives(),
+      // ],
     }))
-    .use(minifyHTML({ extensions: ['.html', '.css', '.js'] }))
-    // .use(nav())
-    .preprocess(['.md'], (page: Page) => {
-      page.data.excerpt ??= (page.data.content as string).split(
-        /<!--\s*more\s*-->/i,
-      )[0]
-      page.data.updated = getDate(page.data.updated, page.src?.entry)
-    })
+// .use(minifyHTML({ extensions: ['.html', '.css', '.js'] }))
+// .use(nav())
+// .preprocess(['.md'], (pages) =>
+//   pages.forEach((page) => {
+//     page.data.excerpt ??= (page.data.content as string).split(
+//       /<!--\s*more\s*-->/i,
+//     )[0]
+//     if (!page.data.updated) {
+//       page.data.updated = getGitDate('modified', page.src.entry.src)
+//     }
+//   }))
