@@ -4,10 +4,10 @@ import sharedPlugins from './plugins/shared.ts'
 import remarkPlugins from './plugins/remark.ts'
 // import multilanguage from 'lume/plugins/multilanguage.ts'
 
-export default lume({
+const site = lume({
   src: './src',
   location: new URL('https://lume.shiraha.js.org/'),
-})
+}, { markdown: {} })
   .use(sharedPlugins())
   .use(remarkPlugins())
 // .use(
@@ -15,3 +15,5 @@ export default lume({
 //     languages: ['en', 'zh', 'ja'],
 //   }),
 // )
+
+export default site

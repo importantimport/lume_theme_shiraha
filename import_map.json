@@ -1,6 +1,8 @@
 {
   "imports": {
-    "lume/": "https://deno.land/x/lume@v1.19.3/",
-    "fff": "https://deno.land/x/fff@v1.1.0/mod.ts"
+    "lume/": "https://deno.land/x/lume@v2.0.1/",
+    "fff": "https://deno.land/x/fff@v1.1.0/mod.ts",
+    "hono/": "https://deno.land/x/hono@v3.11.0/",
+    "hono/jsx/jsx-runtime": "https://deno.land/x/hono@v3.11.0/jsx/jsx-runtime.ts"
   }
 }

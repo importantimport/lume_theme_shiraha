@@ -1,9 +1,11 @@
 // remark plugins
 import remarkFFF from 'https://esm.sh/remark-fff'
+import remarkReadingTime from 'npm:remark-reading-time@2.0.1'
 // rehype plugins
-import rehypeStarryNight from 'https://esm.sh/@microflash/rehype-starry-night'
+import rehypePrettyCode from 'npm:rehype-pretty-code@0.12.1'
 
 export const remarkPlugins = [
+  remarkReadingTime,
   [
     remarkFFF,
     {
@@ -14,5 +16,17 @@ export const remarkPlugins = [
 ]
 
 export const rehypePlugins = [
-  rehypeStarryNight,
+  [
+    rehypePrettyCode,
+    {
+      defaultLang: 'plaintext',
+      keepBackground: false,
+      theme: {
+        // light: 'material-theme-lighter',
+        // dark: 'material-theme-darker',
+        light: 'github-light',
+        dark: 'github-dark',
+      },
+    },
+  ],
 ]

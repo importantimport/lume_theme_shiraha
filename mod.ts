@@ -1,8 +1,7 @@
-import type { Site } from 'lume/core.ts'
 import sharedPlugins from './plugins/shared.ts'
 import remarkPlugins from './plugins/remark.ts'
 
-const src = (files: string[]) => (site: Site) =>
+const src = (files: string[]) => (site: Lume.Site) =>
   files.forEach((file) =>
     site.remoteFile(file, import.meta.resolve(`./src/${file}`))
   )
@@ -20,35 +19,35 @@ export const data = () =>
 
 export const includes = () =>
   src([
-    '_includes/layouts/root.tmpl.ts',
-    '_includes/layouts/post.tmpl.ts',
-    '_includes/layouts/list.tmpl.ts',
-    '_includes/layouts/article.tmpl.ts',
+    '_includes/layouts/root.page.ts',
+    '_includes/layouts/post.page.ts',
+    '_includes/layouts/list.page.ts',
+    '_includes/layouts/article.page.ts',
   ])
 
 export const pages = () =>
   src([
     '404.md',
-    'categories.feed.json.tmpl.ts',
-    'categories.tmpl.ts',
-    'index.feed.json.tmpl.ts',
-    'index.tmpl.ts',
-    'styles.css.tmpl.ts',
-    'tags.feed.json.tmpl.ts',
-    'tags.tmpl.ts',
+    'categories.feed.json.page.ts',
+    'categories.page.ts',
+    'index.feed.json.page.ts',
+    'index.page.ts',
+    'styles.css.page.ts',
+    'tags.feed.json.page.ts',
+    'tags.page.ts',
   ])
 
-export const templates = () => (site: Site) =>
+export const templates = () => (site: Lume.Site) =>
   site.use(includes()).use(archetypes()).use(data()).use(pages())
 
-export const lts = () => (site: Site) =>
+export const lts = () => (site: Lume.Site) =>
   site.use(templates()).use(sharedPlugins()).use(remarkPlugins())
 
 // --- templates ---
 // archetypes (_archetypes)
 // data (_data)
 // includes (_includes)
-// pages (*.tmpl.ts)
+// pages (*.page.ts)
 // *templates* (archetypes + data + includes + pages)
 
 // --- plugins ---

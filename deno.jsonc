@@ -6,10 +6,15 @@
     "build": "deno task lume",
     "serve": "deno task lume -s"
   },
-  // "compilerOptions": {
-  //   "jsx": "react-jsx",
-  //   "jsxImportSource": "npm:react"
-  // },
+  "compilerOptions": {
+    "jsx": "precompile",
+    "jsxImportSource": "hono/jsx",
+    "jsxFactory": "jsx",
+    "jsxFragmentFactory": "Fragment",
+    "types": [
+      "lume/types.ts"
+    ]
+  },
   "lint": {
     "files": {
       "exclude": ["./_site", "./_bin", "./src/articles"]

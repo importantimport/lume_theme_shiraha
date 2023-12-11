@@ -1,0 +1,99 @@
+/* @import url(styles/tokens.css); */
+@import url(styles/theme.light.css) (prefers-color-scheme: light);
+@import url(styles/theme.dark.css) (prefers-color-scheme: dark);
+
+:root {
+  --md-sys-motion-easing-emphasized-accelerate: cubic-bezier(0.3, 0, 0.8, 0.15);
+  --md-sys-motion-easing-emphasized-decelerate: cubic-bezier(0.05, 0.7, 0.1, 1);
+}
+
+/* https://github.com/oscarotero/semantic-html/blob/master/html/page.md#main-element */
+@media print {
+  body > *:not(main) {
+    display: none;
+  }
+}
+
+body {
+  overflow-y: scroll;
+  /* https://github.com/oscarotero/css-style-guide/tree/master/cases/notch */
+  padding: env(safe-area-inset-top) env(safe-area-inset-right)
+    env(safe-area-inset-bottom) env(safe-area-inset-left);
+  scrollbar-color: var(--md-sys-color-on-surface) var(--md-sys-color-surface);
+  scrollbar-gutter: stable both-edges !important;
+  scrollbar-width: thin;
+  text-wrap: pretty;
+}
+
+@media not (prefers-reduced-motion: reduce) {
+  :root {
+    view-transition-name: root;
+  }
+
+  header {
+    view-transition-name: header;
+  }
+
+  footer {
+    view-transition-name: footer;
+  }
+
+  .p-name,
+  .e-content {
+    view-transition-name: var(--name);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  [data-rehype-pretty-code-figure] > pre > code > span > *,
+  :not(a) > [data-rehype-pretty-code-figure] > code {
+    color: var(--shiki-light, var(--md-sys-color-on-surface-variant));
+    /* background-color: var(--shiki-light-bg); */
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  [data-rehype-pretty-code-figure] > pre > code > span > *,
+  :not(a) > [data-rehype-pretty-code-figure] > code {
+    color: var(--shiki-dark, var(--md-sys-color-on-surface-variant));
+    /* background-color: var(--shiki-dark-bg); */
+  }
+}
+
+code[data-line-numbers] {
+  counter-reset: line;
+}
+
+code[data-line-numbers] > [data-line]::before {
+  counter-increment: line;
+  content: counter(line);
+  --at-apply: inline-block w-4 mr-4 text-right;
+}
+
+.prose a:not(:has(h1, h2, h3, h4, h5, h6, [data-rehype-pretty-code-figure])),
+.prose a > [data-rehype-pretty-code-figure] > code > span {
+  color: var(--md-sys-color-primary);
+  text-decoration: none;
+  background: linear-gradient(
+      0deg,
+      var(--md-sys-color-on-primary-container),
+      var(--md-sys-color-on-primary-container)
+    )
+    no-repeat right bottom / 0 0.125em;
+  transition: background-size 400ms
+    var(--md-sys-motion-easing-emphasized-decelerate);
+}
+
+/* .prose a {
+  color: var(--md-sys-color-primary);
+  text-decoration: none;
+  background: linear-gradient(0deg, var(--md-sys-color-on-primary-container), var(--md-sys-color-on-primary-container)) no-repeat right bottom / 0 0.125em;
+  transition: background-size 400ms var(--md-sys-motion-easing-emphasized-decelerate);
+} */
+
+.prose a:hover,
+.prose a:hover > [data-rehype-pretty-code-figure] > code > span {
+  color: var(--md-sys-color-on-primary-container);
+  background-position-x: left;
+  background-size: 100% 0.125em;
+}

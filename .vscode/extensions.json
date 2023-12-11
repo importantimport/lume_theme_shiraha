@@ -1,6 +1,7 @@
 {
   "recommendations": [
     "denoland.vscode-deno",
-    "ms-fast.fast-tagged-templates"
+    "ms-fast.fast-tagged-templates",
+    "antfu.unocss"
   ]
 }
