@@ -95,8 +95,8 @@ section a > [data-rehype-pretty-code-figure] > code > span {
   transition: background-size 400ms var(--md-sys-motion-easing-emphasized-decelerate);
 } */
 
-a:hover,
-a:hover > [data-rehype-pretty-code-figure] > code > span {
+.prose a:hover,
+.prose a:hover > [data-rehype-pretty-code-figure] > code > span {
   color: var(--md-sys-color-on-primary-container);
   background-position-x: left;
   background-size: 100% 0.125em;
