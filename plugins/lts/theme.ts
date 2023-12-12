@@ -57,27 +57,4 @@ export default (userOptions?: Partial<Options>) => (site: Lume.Site) => {
     // console.log(tokens.content)
     pages.push(tokens)
   })
-
-  // const defaultTheme = {
-  //   light: scheme(
-  //     new SchemeTonalSpot(Hct.fromInt(argbFromHex(options.color)), false, 0),
-  //   ),
-  //   dark: scheme(
-  //     new SchemeTonalSpot(Hct.fromInt(argbFromHex(options.color)), true, 0),
-  //   ),
-  // }
-
-  // const tokens = site.getOrCreatePage('/tokens.css')
-  // tokens.
-
-  // site.process(
-  //   ['.html'],
-  //   (pages) =>
-  //     pages.forEach((page) =>
-  //       page.content = (page.content as string).replaceAll(
-  //         '<script></script>',
-  //         '',
-  //       )
-  //     ),
-  // )
 }
