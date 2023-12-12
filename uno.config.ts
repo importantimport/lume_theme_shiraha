@@ -15,7 +15,7 @@ export default {
         },
         'a': {
           'text-decoration': 'none',
-          // color: 'var(--md-sys-color-on-surface)',
+          color: 'var(--md-sys-color-on-surface)',
         },
         // 'a:has(span[data-rehype-pretty-code-figure])': {
         //   'text-decoration': 'none',

@@ -72,10 +72,12 @@ code[data-line-numbers] > [data-line]::before {
   --at-apply: inline-block w-4 mr-4 text-right;
 }
 
-.prose a:not(:has(h1, h2, h3, h4, h5, h6, [data-rehype-pretty-code-figure])),
-.prose a > [data-rehype-pretty-code-figure] > code > span {
-  color: var(--md-sys-color-primary);
-  text-decoration: none;
+section a:not(:has(h1, h2, h3, h4, h5, h6, [data-rehype-pretty-code-figure])),
+section a > [data-rehype-pretty-code-figure] > code > span {
+  text-decoration-line: underline;
+  text-decoration-color: var(--md-sys-color-on-primary-container);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.125em;
   background: linear-gradient(
       0deg,
       var(--md-sys-color-on-primary-container),
@@ -93,8 +95,8 @@ code[data-line-numbers] > [data-line]::before {
   transition: background-size 400ms var(--md-sys-motion-easing-emphasized-decelerate);
 } */
 
-.prose a:hover,
-.prose a:hover > [data-rehype-pretty-code-figure] > code > span {
+a:hover,
+a:hover > [data-rehype-pretty-code-figure] > code > span {
   color: var(--md-sys-color-on-primary-container);
   background-position-x: left;
   background-size: 100% 0.125em;
