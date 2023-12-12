@@ -39,7 +39,9 @@ body {
   }
 
   .p-name,
-  .e-content {
+  .p-summary,
+  .e-content,
+  .lts-date {
     view-transition-name: var(--name);
   }
 }

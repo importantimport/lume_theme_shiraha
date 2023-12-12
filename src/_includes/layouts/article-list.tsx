@@ -8,7 +8,13 @@ export default ({ comp: { Container }, results }: Lume.Data, { slug }: Lume.Help
           <a class="no-underline" href={data.url}>
             <h2 class="p-name" style={`--name: article-title-${slug(data.url)}`}>
               {data.title ?? 'no title'}
-            </h2>    
+            </h2>
+            <p class="lts-date" style={`--name: article-date-${slug(data.url)}`}>
+              <time class="dt-published" datetime={data.date.toISOString()}>
+                {data.date.toLocaleDateString()}
+              </time>
+            </p>
+            {data.summary && <p class="p-summary" style={`--name: article-content-${slug(data.url)}`}>{data.summary}</p>}
           </a>
         </li>
       ))}

@@ -3,9 +3,9 @@ export default ({ children, comp: { Container }, date, title, url, readingTime }
   <Container className="h-entry">
     <article>
       <h1 class="p-name" style={`--name: article-title-${slug(url)}`}>{title}</h1>
-      <p>
+      <p class="lts-date" style={`--name: article-date-${slug(url)}`}>
         <time class="dt-published" datetime={date.toISOString()}>
-          {date.toLocaleDateString('ja-JP')}
+          {date.toLocaleDateString()}
         </time>
         <span> · </span>
         <span>{readingTime.text}</span>
