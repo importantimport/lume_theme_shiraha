@@ -9,10 +9,10 @@ export default ({ title, children, metas }: Lume.Data, { html, url }: Lume.Helpe
       <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text x=%22-.1em%22 y=%22.9em%22 font-size=%2290%22>❄️</text></svg>" />
       <link rel="stylesheet" href={url('/uno.css')} />
       <link rel="stylesheet" href={url('/styles.css')} />
-      {html`<script async type="module">
+      {/* {html`<script async type="module">
         import { listen } from 'https://esm.run/quicklink'
         listen()
-      </script>`}
+      </script>`} */}
     </head>
     <body class="prose max-w-none bg-surface color-onsurface">
       {children}
