@@ -6,6 +6,7 @@ title: Typography should be easy.
 #     url: https://github.com/tailwindlabs/tailwindcss-typography/blob/master/demo/components/MarkdownSample.mdx
 tags:
   - TailwindCSS
+image: https://images.unsplash.com/photo-1556740758-90de374c12ad?auto=format&fit=crop&w=1000&q=80
 ---
 
 <p className="lead">
