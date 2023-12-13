@@ -7,7 +7,7 @@ import theme from './lts/theme.ts'
 import metas from 'lume/plugins/metas.ts'
 // import date from 'lume/plugins/date.ts'
 import sitemap from 'lume/plugins/sitemap.ts'
-// import minifyHTML from 'lume/plugins/minify_html.ts'
+import minifyHTML from 'lume/plugins/minify_html.ts'
 // import nav from 'lume/plugins/nav.ts'
 // import pagefind from 'lume/plugins/pagefind.ts'
 import unocss from 'lume/plugins/unocss.ts'
@@ -32,8 +32,9 @@ export default () => (site: Lume.Site) =>
       reset: 'tailwind',
     }))
     .use(lightningcss())
-// .use(minifyHTML({ extensions: ['.html', '.css', '.js'] }))
+    .use(minifyHTML({ extensions: ['.html', '.css', '.js'] }))
 // .use(nav())
+// .use(pagefind())
 // .preprocess(['.md'], (pages) =>
 //   pages.forEach((page) => {
 //     page.data.excerpt ??= (page.data.content as string).split(

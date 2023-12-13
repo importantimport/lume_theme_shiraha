@@ -8,7 +8,6 @@ import {
   themeFromArgb,
   themeFromHex,
 } from './lib/theme_utils.ts'
-import { log } from 'lume/core/utils/log.ts'
 import { hexFromArgb } from 'npm:@material/material-color-utilities@0.2.7'
 
 export interface Options {
