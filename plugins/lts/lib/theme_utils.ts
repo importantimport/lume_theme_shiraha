@@ -4,7 +4,6 @@ import {
   Hct,
   hexFromArgb,
   QuantizerCelebi,
-  SchemeContent,
   SchemeTonalSpot,
   Score,
 } from 'npm:@material/material-color-utilities@0.2.7'
@@ -15,7 +14,6 @@ import {
   createCanvas,
   Image,
 } from 'https://deno.land/x/skia_canvas@0.5.5/mod.ts'
-// import { log } from 'lume/core/utils/log.ts'
 
 export type Theme = {
   dark: Scheme
@@ -25,27 +23,6 @@ export type Theme = {
 export const sourceColorFromImage = (
   src: Uint8Array,
 ): number => {
-  // Convert Image data to Pixel Array
-  // const imageBytes = await new Promise<Uint8ClampedArray>(
-  //   (resolve, reject) => {
-  //     const image = new Image(src)
-  //     if (image) {
-  //       log.info(`width: ${image.width}\nheight: ${image.height}`)
-  //     }
-  //     const canvas = createCanvas(image.width, image.height)
-  //     const context = canvas.getContext('2d')
-  //     if (!context) {
-  //       reject(new Error('Could not get canvas context'))
-  //       return
-  //     }
-  //     try {
-  //       context.drawImage(image, 0, 0)
-  //     } catch (err) {
-  //       log.error(err)
-  //     }
-  //     resolve(context.getImageData(0, 0, image.width, image.height).data)
-  //   },
-  // )
   const image = new Image(src)
   const canvas = createCanvas(image.width, image.height)
   const context = canvas.getContext('2d')
@@ -56,8 +33,6 @@ export const sourceColorFromImage = (
     0,
     256,
     256,
-    // image.width,
-    // image.height,
   )
 
   // Convert Image data to Pixel Array
@@ -86,11 +61,6 @@ export const themeFromArgb = (argb: number) =>
     ['light', 'dark'].map((suffix) => [
       suffix,
       scheme(
-        // new SchemeContent(
-        //   Hct.fromInt(argb),
-        //   suffix === 'dark',
-        //   0,
-        // ),
         new SchemeTonalSpot(
           Hct.fromInt(argb),
           suffix === 'dark',
