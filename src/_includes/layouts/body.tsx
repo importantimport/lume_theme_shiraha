@@ -12,6 +12,10 @@ export default ({ title, children, metas }: Lume.Data, { html, url }: Lume.Helpe
       <link rel="stylesheet" href={url('/styles.css')} />
       {/* <link rel="stylesheet" href={url('/styles/tokens.css')} /> */}
       {/* {html`<script async type="module" src="https://esm.run/shiraha-colors"></script>`} */}
+      {html`<script async type="module">
+        import { listen } from 'https://esm.run/quicklink'
+        listen()
+      </script>`}
     </head>
     <body class="prose max-w-none bg-surface color-onsurface">
       {children}
