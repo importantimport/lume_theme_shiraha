@@ -1,5 +1,5 @@
 export const layout = 'layouts/body.tsx'
-export default ({ children, comp: { Container }, date, title, url: dataUrl, readingTime }: Lume.Data, { url, slug }: Lume.Helpers) => (
+export default ({ children, comp: { Container, Tags }, date, title, url: dataUrl, readingTime, tags }: Lume.Data, { url, slug }: Lume.Helpers) => (
   <Container className="h-entry">
     <article>
       <data class="u-url u-uid" value={url(dataUrl, true)} />
@@ -14,6 +14,7 @@ export default ({ children, comp: { Container }, date, title, url: dataUrl, read
       <section class="e-content mt-12 flex flex-col gap-6 children:m-0" style={`--name: article-content-${slug(dataUrl)}`}>
         {children}
       </section>
+      <Tags tags={tags} />
     </article>
   </Container>
 )
