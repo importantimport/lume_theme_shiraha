@@ -4,7 +4,7 @@ export default ({ children, comp: { Container }, date, title, url: dataUrl, read
     <article>
       <h1 class="p-name" style={`--name: article-title-${slug(dataUrl)}`}>{title}</h1>
       <p class="lts-date" style={`--name: article-date-${slug(dataUrl)}`}>
-        <a class="u-url u-uid" href={url(dataUrl)}>
+        <a class="u-url u-uid" href={url(dataUrl, true)}>
           <time class="dt-published" datetime={date.toISOString()}>
             {date.toLocaleDateString()}
           </time>
