@@ -11,11 +11,11 @@ export default {
           'text-wrap': 'balance',
         },
         'p': {
-          color: 'var(--md-sys-color-on-surface-variant)',
+          'color': 'var(--md-sys-color-on-surface-variant)',
         },
         'a': {
           'text-decoration': 'none',
-          color: 'var(--md-sys-color-on-surface)',
+          'color': 'var(--md-sys-color-on-surface)',
         },
         // 'a:has(span[data-rehype-pretty-code-figure])': {
         //   'text-decoration': 'none',
@@ -28,6 +28,10 @@ export default {
         //   'text-decoration':
         //     'underline var(--md-sys-color-on-primary-container) 2px !important',
         // },
+        'mark,mark *': {
+          'background-color': 'var(--md-sys-color-primary)',
+          'color': 'var(--md-sys-color-on-primary)',
+        },
         'pre': {
           'padding': '1.25rem 0',
         },
