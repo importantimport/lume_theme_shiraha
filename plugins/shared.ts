@@ -2,6 +2,7 @@ import html from './helpers/html.ts'
 import slug from './helpers/slug.ts'
 import jsx from './lts/jsx.ts'
 import theme from './lts/theme.ts'
+import readInfo from './patched/reading_info.ts'
 // import { getGitDate } from 'lume/core/utils/date.ts'
 // import filterPages from 'lume/plugins/filter_pages.ts'
 import metas from 'lume/plugins/metas.ts'
@@ -23,6 +24,7 @@ export default () => (site: Lume.Site) =>
       color: '#6750a4',
       filename: '/styles/tokens.css',
     }))
+    .use(readInfo())
     .use(metas())
     // .use(date())
     .use(sitemap())
