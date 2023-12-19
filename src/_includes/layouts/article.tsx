@@ -24,7 +24,9 @@ export default ({ children, comp: { Container, Tags }, date, title, url: dataUrl
       <section class="e-content mt-12 flex flex-col gap-6 children:m-0" style={`--name: article-content-${slug(dataUrl)}`}>
         {children}
       </section>
-      <Tags tags={tags} />
+      <div class="mt-8 lts-tags" style={`--name: article-tags-${slug(dataUrl)}`}>
+        <Tags tags={tags} />
+      </div>
     </article>
   </Container>
 )
