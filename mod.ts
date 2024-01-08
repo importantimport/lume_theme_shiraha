@@ -9,11 +9,12 @@ const src = (path = '/', files: string[]) => () => (site: Lume.Site) =>
 export const archetypes = src('/_archetypes/', ['article.ts'])
 
 export const components = src('/_components/', [
-  'container.tsx',
   'footer.tsx',
   'head.tsx',
   'header.tsx',
   'tags.tsx',
+  // required footer, header
+  'container.tsx',
 ])
 
 export const data = src('/_data/', [
