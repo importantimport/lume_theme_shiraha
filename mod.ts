@@ -3,7 +3,10 @@ import remarkPlugins from './plugins/remark.ts'
 
 const src = (path = '/', files: string[]) => () => (site: Lume.Site) =>
   files.forEach((file) =>
-    site.remoteFile(file, import.meta.resolve(`./src${path}${file}`))
+    site.remoteFile(
+      `${path}${file}`,
+      import.meta.resolve(`./src${path}${file}`),
+    )
   )
 
 export const archetypes = src('/_archetypes/', ['article.ts'])
