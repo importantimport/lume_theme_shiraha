@@ -21,6 +21,19 @@
 }
 ```
 
+```jsonc
+// deno.json
+{
+  "compilerOptions": {
+    "jsx": "precompile",
+    "jsxImportSource": "hono/jsx",
+    "jsxFactory": "jsx",
+    "jsxFragmentFactory": "Fragment",
+    "types": ["lume/types.ts"]
+  },
+}
+```
+
 ```ts
 // _config.ts
 import lume from 'lume/mod.ts'
