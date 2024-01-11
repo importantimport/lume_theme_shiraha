@@ -8,23 +8,28 @@
 
 ## Usage
 
+```jsonc
+// import_map.json / deno.json
+{
+  "imports": {
+    "lume/": "https://deno.land/x/lume@v2.0.2/", // ^2.0.2
+    "lume_theme_shiraha/": "https://deno.land/x/lume_theme_shiraha@v0.1.0/", // unpublished, use below:
+    // "lume_theme_shiraha/": "https://raw.githubusercontent.com/importantimport/lume_theme_shiraha/main/",
+    "hono/": "https://deno.land/x/hono@v3.11.0/", // ^3.11.0
+    "hono/jsx/jsx-runtime": "https://deno.land/x/hono@v3.11.0/jsx/jsx-runtime.ts" // ^3.11.0
+  }
+}
+```
+
 ```ts
 // _config.ts
 import lume from 'lume/mod.ts'
-
-// from deno.land/x (stable)
-import lts from 'https://deno.land/x/lume_theme_shiraha/mod.ts'
-
-// from deno.land/x (specific version)
-// import lts from 'https://deno.land/x/lume_theme_shiraha@0.0.3/mod.ts'
-
-// from github (latest)
-// import lts from 'https://raw.githubusercontent.com/importantimport/lume_theme_shiraha/main/mod.ts'
+import lts from 'lume_theme_shiraha/mod.ts'
 
 export default lume().use(lts())
 ```
 
-## Features
+<!-- ## Features
 
 ### [FFF Flavored Frontmatter](https://fff.js.org)
 
@@ -50,9 +55,9 @@ All templates use `.tmpl.ts` and have no additional dependencies.
 
 ### View Transitions [WIP]
 
-> Currently you need to enable `#view-transition-on-navigation` manually in chrome://flags.
+> Currently you need to enable `#view-transition-on-navigation` manually in [`chrome://flags`](chrome://flags).
 
-No need for additional Swup or Pjax, the most native page transition.
+No need for additional Swup or Pjax, the most native page transition. -->
 
 ## License
 
