@@ -1,7 +1,10 @@
 import type { PluggableList } from 'lume/deps/remark.ts'
 // remark plugins
-import remarkFFF from 'https://esm.sh/remark-fff'
+import remarkFFF from 'npm:remark-fff@1.2.0'
+import remarkGfm from 'npm:remark-gfm@4.0.0'
+import remarkSmartyPants from 'npm:remark-smartypants@2.1.0'
 // rehype plugins
+import rehypeAutolinkHeadings from 'npm:rehype-autolink-headings@7.1.0'
 import rehypePrettyCode from 'npm:rehype-pretty-code@0.12.1'
 // shikiji transformers
 // import { transformerNotationDiff } from 'npm:shikiji-transformers@0.8.3'
@@ -16,9 +19,12 @@ export const remarkPlugins: any[] = [
       target: 'nuxt',
     },
   ],
+  remarkGfm,
+  remarkSmartyPants,
 ]
 
 export const rehypePlugins: PluggableList = [
+  rehypeAutolinkHeadings,
   [
     rehypePrettyCode,
     {
