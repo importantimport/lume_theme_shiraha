@@ -1,6 +1,6 @@
 import { presetUno } from 'lume/deps/unocss.ts'
-import type { UserConfig } from 'npm:@unocss/core@0.58.0'
-import { presetTypography } from 'npm:@unocss/preset-typography@0.58.0'
+import type { UserConfig } from 'npm:@unocss/core@0.58.3'
+import { presetTypography } from 'npm:@unocss/preset-typography@0.58.3'
 
 export default {
   presets: [
