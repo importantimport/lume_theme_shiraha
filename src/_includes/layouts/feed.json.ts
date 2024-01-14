@@ -22,6 +22,7 @@ export default async (
         ? url(data.pagination.next, true)
         : undefined,
       description: data.site?.description,
+      authors: [data.lts.author],
     }),
     items: await Promise.all(
       data.results?.map(async (item) =>
