@@ -1,4 +1,5 @@
-import { type FFFFlavoredFrontmatter, toJSONFeedItem } from 'fff'
+import type { FFFFlavoredFrontmatter } from 'fff/src/types.ts'
+import { toJSONFeedItem } from 'fff/src/utils/feed.ts'
 
 /** @see {@link https://github.com/lumeland/lume/blob/main/plugins/feed.ts} */
 const clean = (obj: Record<string, unknown>) =>

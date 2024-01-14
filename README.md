@@ -12,11 +12,12 @@
 // import_map.json / deno.json
 {
   "imports": {
-    "lume/": "https://deno.land/x/lume@v2.0.2/", // ^2.0.2
+    "lume/": "https://deno.land/x/lume@v2.0.3/", // ^2.0.3
     "lume_theme_shiraha/": "https://deno.land/x/lume_theme_shiraha@v0.1.0/", // unpublished, use below:
     // "lume_theme_shiraha/": "https://raw.githubusercontent.com/importantimport/lume_theme_shiraha/main/",
-    "hono/": "https://deno.land/x/hono@v3.11.0/", // ^3.11.0
-    "hono/jsx/jsx-runtime": "https://deno.land/x/hono@v3.11.0/jsx/jsx-runtime.ts" // ^3.11.0
+    "fff/": "https://deno.land/x/fff@v1.2.1/", // ^1.2.1
+    "hono/": "https://deno.land/x/hono@v3.12.2/", // ^3.12.2
+    "hono/jsx/jsx-runtime": "https://deno.land/x/hono@v3.12.2/jsx/jsx-runtime.ts" // ^3.12.2
   }
 }
 ```
