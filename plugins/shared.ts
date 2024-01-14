@@ -1,5 +1,6 @@
 import html from './helpers/html.ts'
 import slug from './helpers/slug.ts'
+import data from './lts/data.ts'
 import jsx from './lts/jsx.ts'
 import theme from './lts/theme.ts'
 import readInfo from './patched/reading_info.ts'
@@ -19,6 +20,14 @@ export default () => (site: Lume.Site) =>
   site
     .use(html())
     .use(slug())
+    // TODO: move to mod.ts
+    .use(data({
+      // author: {
+      //   avatar: 'https://kwaa.dev/assets/maskable@192.webp',
+      //   name: '藍+85CD',
+      //   url: 'https://kwaa.dev',
+      // },
+    }))
     .use(jsx())
     .use(theme({
       color: '#6750a4',
