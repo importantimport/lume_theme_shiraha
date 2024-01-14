@@ -1,4 +1,3 @@
-import type { FFFFlavoredFrontmatter } from 'fff/src/types.ts'
 import { toJSONFeedItem } from 'fff/src/utils/feed.ts'
 
 /** @see {@link https://github.com/lumeland/lume/blob/main/plugins/feed.ts} */
@@ -27,7 +26,7 @@ export default async (
     items: await Promise.all(
       data.results?.map(async (item) =>
         clean({
-          ...toJSONFeedItem(item as FFFFlavoredFrontmatter, {
+          ...toJSONFeedItem(item, {
             id: url(item.url, true),
             url: url(item.url, true),
             content_html: item.content
