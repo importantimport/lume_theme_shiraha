@@ -9,7 +9,8 @@ export interface DocumentMeta {
 
 export interface DocumentLink {
   as?: string
-  crossorigin?: string
+  // crossorigin?: string
+  crossorigin?: '' | 'anonymous' | 'use-credentials'
   disabled?: boolean
   href?: string
   hreflang?: string
@@ -19,7 +20,17 @@ export interface DocumentLink {
   integrity?: string
   media?: string
   prefetch?: string
-  referrerpolicy?: string
+  // referrerpolicy?: string
+  referrerpolicy?:
+    | ''
+    | 'no-referrer'
+    | 'no-referrer-when-downgrade'
+    | 'origin'
+    | 'origin-when-cross-origin'
+    | 'same-origin'
+    | 'strict-origin'
+    | 'strict-origin-when-cross-origin'
+    | 'unsafe-url'
   rel?: string
   sizes?: string
   title?: string
