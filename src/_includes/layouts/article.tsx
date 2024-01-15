@@ -1,7 +1,7 @@
 export const layout = 'layouts/body.tsx'
 export default ({ children, comp: { Container, Tags }, date, title, url: dataUrl, readingInfo, tags }: Lume.Data, { url, slug }: Lume.Helpers) => (
-  <Container className="h-entry">
-    <article>
+  <Container>
+    <article class="h-entry">
       <data class="u-url u-uid" value={url(dataUrl, true)} />
       <h1 class="p-name" style={`--name: article-title-${slug(dataUrl)}`}>{title}</h1>
       <p class="lts-date" style={`--name: article-date-${slug(dataUrl)}`}>

@@ -24,7 +24,7 @@ export const data = src('/_data/', [
   // '_data/date.yml',
   // '_data/metas.yml',
   // '_data/shiraha.yml',
-  'site.yml',
+  'metas.yml',
 ])
 
 export const includes = src('/_includes/', [

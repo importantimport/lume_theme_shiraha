@@ -15,13 +15,13 @@ export default async (
   JSON.stringify({
     version: 'https://jsonfeed.org/version/1.1',
     ...clean({
-      title: data.site.title,
+      title: data.lts.site.title,
       home_page_url: url('', true),
       feed_url: url(data.url, true),
       next_url: data.pagination?.next
         ? url(data.pagination.next, true)
         : undefined,
-      description: data.site?.description,
+      description: data.lts.site.description,
       authors: [data.lts.author],
     }),
     items: await Promise.all(

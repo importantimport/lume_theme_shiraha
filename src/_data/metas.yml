@@ -1,0 +1,8 @@
+# https://lume.land/plugins/metas/#description
+site: '=lts.site.title'
+title: '=title'
+lang: '=lang'
+description: '=summary'
+image: '=image'
+icon: '=lts.site.icon'
+keywords: '=tags'
