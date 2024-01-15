@@ -31,7 +31,7 @@
     "jsxFactory": "jsx",
     "jsxFragmentFactory": "Fragment",
     "types": ["lume/types.ts"]
-  },
+  }
 }
 ```
 

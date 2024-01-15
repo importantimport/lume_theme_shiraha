@@ -13,9 +13,8 @@ const defaults: LTSData = {
   },
 }
 
-export default (user?: Partial<LTSData>) => (site: Lume.Site) => {
+export default (user?: Partial<LTSData>) => (site: Lume.Site) =>
   site.data('lts', merge(defaults, user))
-}
 
 /** Extends Data interface */
 declare global {
