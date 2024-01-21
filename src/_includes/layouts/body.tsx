@@ -1,6 +1,5 @@
-export default ({ children, comp: { Head }, head, lts, metas, title }: Lume.Data, {}: Lume.Helpers) => (
-  // TODO: data.lts.site.lang
-  <html lang="en" class="h-feed">
+export default ({ children, comp: { Head }, head, lts, title }: Lume.Data, {}: Lume.Helpers) => (
+  <html lang={lts.site.lang} class="h-feed">
     <Head>
       <title>{title ? `${title} - ${lts.site.title}` : lts.site.title}</title>
       {head?.metas?.map((meta, key) => (<meta key={key} {...meta} />))}
