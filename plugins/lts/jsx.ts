@@ -24,7 +24,8 @@ export const defaults: Options = {
 }
 
 export class HonoJsxEngine implements Engine {
-  jsxImportSource = 'hono/jsx'
+  // jsxImportSource = 'hono/jsx'
+  jsxImportSource = 'lume_theme_shiraha'
   helpers: Record<string, Helper> = {}
   basePath: string
   includes: string
@@ -43,9 +44,6 @@ export class HonoJsxEngine implements Engine {
   ) {
     // The content is a string, so we have to convert it to a element
     if (typeof content === 'string') {
-      // content = jsx('div', {
-      //   dangerouslySetInnerHTML: { __html: content },
-      // })
       content = jsx('script', {
         dangerouslySetInnerHTML: { __html: `</script>${content}<script>` },
       })
@@ -56,9 +54,6 @@ export class HonoJsxEngine implements Engine {
 
     // If the children is a string, convert it to a element
     if (typeof children === 'string') {
-      // children = jsx('div', {
-      //   dangerouslySetInnerHTML: { __html: children },
-      // })
       children = jsx('script', {
         dangerouslySetInnerHTML: { __html: `</script>${children}<script>` },
       })
