@@ -16,7 +16,7 @@
     "lume_theme_shiraha/": "https://deno.land/x/lume_theme_shiraha@v0.1.0/", // unpublished, use below:
     // "lume_theme_shiraha/": "https://raw.githubusercontent.com/importantimport/lume_theme_shiraha/main/",
     "lume_theme_shiraha/jsx-runtime": "https://deno.land/x/lume_theme_shiraha@v0.1.0/jsx-runtime.ts" // unpublished, use below:
-    // "lume_theme_shiraha/": "https://raw.githubusercontent.com/importantimport/lume_theme_shiraha/main/jsx-runtime.ts",
+    // "lume_theme_shiraha/jsx-runtime": "https://raw.githubusercontent.com/importantimport/lume_theme_shiraha/main/jsx-runtime.ts",
   }
 }
 ```
