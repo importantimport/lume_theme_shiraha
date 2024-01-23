@@ -1,5 +1,6 @@
-import type { FFFAuthor } from 'fff/src/types.ts'
 import { merge } from 'lume/core/utils/object.ts'
+
+import type { FFFAuthor } from '../../deps/fff.ts'
 
 export interface LTSData {
   author: FFFAuthor

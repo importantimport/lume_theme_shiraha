@@ -1,8 +1,8 @@
-import { jsx } from 'hono/jsx/jsx-runtime'
-import type { JSXNode } from 'hono/jsx/index.ts'
 import type { Engine, Helper } from 'lume/core/renderer.ts'
 import loader from 'lume/core/loaders/module.ts'
 import { merge } from 'lume/core/utils/object.ts'
+
+import { jsx, type JSXNode } from '../../deps/hono_jsx.ts'
 
 export interface Options {
   /** The list of extensions this plugin applies to */

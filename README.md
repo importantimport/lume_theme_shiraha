@@ -15,9 +15,8 @@
     "lume/": "https://deno.land/x/lume@v2.0.3/", // ^2.0.3
     "lume_theme_shiraha/": "https://deno.land/x/lume_theme_shiraha@v0.1.0/", // unpublished, use below:
     // "lume_theme_shiraha/": "https://raw.githubusercontent.com/importantimport/lume_theme_shiraha/main/",
-    "fff/": "https://deno.land/x/fff@v1.2.1/", // ^1.2.1
-    "hono/": "https://deno.land/x/hono@v3.12.2/", // ^3.12.2
-    "hono/jsx/jsx-runtime": "https://deno.land/x/hono@v3.12.2/jsx/jsx-runtime.ts" // ^3.12.2
+    "lume_theme_shiraha/jsx-runtime": "https://deno.land/x/lume_theme_shiraha@v0.1.0/jsx-runtime.ts" // unpublished, use below:
+    // "lume_theme_shiraha/": "https://raw.githubusercontent.com/importantimport/lume_theme_shiraha/main/jsx-runtime.ts",
   }
 }
 ```
@@ -27,7 +26,7 @@
 {
   "compilerOptions": {
     "jsx": "precompile",
-    "jsxImportSource": "hono/jsx",
+    "jsxImportSource": "lume_theme_shiraha",
     "jsxFactory": "jsx",
     "jsxFragmentFactory": "Fragment",
     "types": ["lume/types.ts"]

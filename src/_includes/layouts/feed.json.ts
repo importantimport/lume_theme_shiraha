@@ -1,4 +1,4 @@
-import { toJSONFeedItem } from 'fff/src/utils/feed.ts'
+import { toJSONFeedItem } from '../../../deps/fff.ts'
 
 /** @see {@link https://github.com/lumeland/lume/blob/main/plugins/feed.ts} */
 const clean = (obj: Record<string, unknown>) =>

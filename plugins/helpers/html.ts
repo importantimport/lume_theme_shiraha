@@ -1,4 +1,4 @@
-import { html } from 'hono/helper/html/index.ts'
+import { html } from '../../deps/hono_jsx.ts'
 
 export default () => (site: Lume.Site) =>
   site.helper('html', html, { type: 'tag' })
