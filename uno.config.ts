@@ -45,7 +45,9 @@ export default {
           'overflow-y': 'hidden',
         },
         'pre:before': {
-          'color': 'var(--md-sys-color-surface-container-highest)',
+          // 'color': 'var(--md-sys-color-surface-container-highest)',
+          'color': 'var(--md-sys-color-on-surface-variant)',
+          'opacity': '0.38',
           'content': 'attr(data-language)',
           'display': 'grid',
           'line-height': 1,
