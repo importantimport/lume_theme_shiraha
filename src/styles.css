@@ -48,18 +48,36 @@ body {
 }
 
 @media (prefers-color-scheme: light) {
-  [data-rehype-pretty-code-figure] > pre > code > span > *,
-  :not(a) > [data-rehype-pretty-code-figure] > code {
+  [data-rehype-pretty-code-figure] * {
     color: var(--shiki-light, var(--md-sys-color-on-surface-variant));
     /* background-color: var(--shiki-light-bg); */
   }
 }
 
 @media (prefers-color-scheme: dark) {
-  [data-rehype-pretty-code-figure] > pre > code > span > *,
-  :not(a) > [data-rehype-pretty-code-figure] > code {
+  [data-rehype-pretty-code-figure] * {
     color: var(--shiki-dark, var(--md-sys-color-on-surface-variant));
     /* background-color: var(--shiki-dark-bg); */
+  }
+}
+
+figure[data-rehype-pretty-code-figure] {
+  & > figcaption[data-rehype-pretty-code-title] {
+    background-color: var(--md-sys-color-surface-container-highest);
+    border-top-left-radius: .375rem;
+    border-top-right-radius: .375rem;
+    color: var(--md-sys-color-on-surface-variant);
+    padding: 0.25rem 0.5rem 0.5rem 0.5rem;
+    margin-bottom: -1.25rem;
+  }
+  & > figcaption[data-rehype-pretty-code-caption] {
+    background-color: var(--md-sys-color-surface-container-highest);
+    border-bottom-left-radius: .375rem;
+    border-bottom-right-radius: .375rem;
+    color: var(--md-sys-color-on-surface-variant);
+    padding: 0.5rem 0.5rem 0.25rem 0.5rem;
+    margin-top: -1.25rem;
+    margin-bottom: 1.25rem;
   }
 }
 
@@ -70,7 +88,19 @@ code[data-line-numbers] {
 code[data-line-numbers] > [data-line]::before {
   counter-increment: line;
   content: counter(line);
+  color: var(--md-sys-color-on-surface-variant);
   --at-apply: inline-block w-4 mr-4 text-right;
+}
+
+span[data-highlighted-line] {
+  background-color: var(--md-sys-color-surface-container-high);
+}
+
+mark[data-highlighted-chars] {
+  background-color: var(--md-sys-color-surface-container-highest);
+  border-radius: 0.25rem;
+  box-shadow: 0 0 0 0.125rem var(--md-sys-color-surface-container-highest);
+  color: inherit;
 }
 
 section a:not(:has(h1, h2, h3, h4, h5, h6, [data-rehype-pretty-code-figure])),
