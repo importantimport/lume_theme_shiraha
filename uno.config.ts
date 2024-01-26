@@ -19,8 +19,9 @@ export default {
           'color': 'var(--md-sys-color-on-surface-variant)',
         },
         'a': {
+          'color': 'var(--md-sys-color-primary)',
+          'font-weight': 'inherit',
           'text-decoration': 'none',
-          'color': 'var(--md-sys-color-on-surface)',
         },
         // 'a:has(span[data-rehype-pretty-code-figure])': {
         //   'text-decoration': 'none',

@@ -105,10 +105,6 @@ mark[data-highlighted-chars] {
 
 section a:not(:has(h1, h2, h3, h4, h5, h6, [data-rehype-pretty-code-figure])),
 section a > [data-rehype-pretty-code-figure] > code > span {
-  text-decoration-line: underline;
-  text-decoration-color: var(--md-sys-color-on-primary-container);
-  text-decoration-thickness: 1px;
-  text-underline-offset: 0.125em;
   background: linear-gradient(
       0deg,
       var(--md-sys-color-on-primary-container),
