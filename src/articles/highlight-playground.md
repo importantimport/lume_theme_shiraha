@@ -105,8 +105,11 @@ export default function* ({ search, paginate }: Lume.Data) {
 
 ### Twoslash
 
+> Type import doesn't work in Deno.
+
 ```ts twoslash
-import { rendererRich, transformerTwoslash } from 'shikiji-twoslash'
+// import { rendererRich, transformerTwoslash } from 'shikiji-twoslash'
+import { rendererRich, transformerTwoslash } from 'npm:shikiji-twoslash@0.10.1'
 
 transformerTwoslash({
   renderer: rendererRich() // <--
@@ -144,4 +147,29 @@ const b = 1
 // @warn: Custom warning message
 const c = 1
 // @annotate: Custom annotation message
+```
+
+```ts twoslash
+const HTML = await Deno.readFile("./index.html")
+
+Deno.serve((req: Request) => new Response(HTML, {
+  headers: {
+    'content-type': 'text/html',
+  },
+}))
+```
+
+```ts twoslash
+const FILE_URL = new URL("/movie.webm", import.meta.url).href
+
+export default {
+  fetch: async (req: Request) => {
+    const res = await fetch(FILE_URL)
+    return new Response(res.body, {
+      headers: {
+        'content-type': 'video/webm',
+      },
+    })
+  }
+}
 ```

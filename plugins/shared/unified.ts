@@ -5,10 +5,10 @@ import remarkSmartyPants from 'npm:remark-smartypants@2.1.0'
 // rehype plugins
 import rehypeSlug from 'npm:rehype-slug@5.1.0'
 import rehypeAutolinkHeadings from 'npm:rehype-autolink-headings@7.1.0'
-import rehypePrettyCode from 'npm:rehype-pretty-code@0.12.1'
+import rehypePrettyCode from 'npm:rehype-pretty-code@0.12.6'
 // shikiji transformers
-// import { transformerNotationDiff } from 'npm:shikiji-transformers@0.8.3'
-// import { rendererRich, transformerTwoSlash } from 'npm:shikiji-twoslash@0.8.3'
+// import { transformerNotationDiff } from 'npm:shikiji-transformers@0.10.1'
+import { transformerTwoslash } from 'npm:shikiji-twoslash@0.10.1'
 
 export const remarkPlugins: PluggableList = [
   [
@@ -36,13 +36,12 @@ export const rehypePlugins: PluggableList = [
         light: 'github-light',
         dark: 'github-dark',
       },
-      // transformers: [
-      //   transformerNotationDiff(),
-      //   transformerTwoSlash({
-      //     explicitTrigger: true,
-      //     renderer: rendererRich(),
-      //   }),
-      // ],
+      transformers: [
+        // transformerNotationDiff(),
+        transformerTwoslash({
+          explicitTrigger: true,
+        }),
+      ],
     },
   ],
 ]

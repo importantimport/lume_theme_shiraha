@@ -11,6 +11,7 @@ export default ({ children }: Lume.Data, { url }: Lume.Helpers) => (
         import { listen } from 'https://esm.run/quicklink'
         listen()
       </script>`} */}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/shikiji-twoslash@0.10.1/style-rich.min.css" />
     {children}
   </head>
 )
