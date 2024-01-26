@@ -1,5 +1,6 @@
 {
   "imports": {
+    "hono/": "https://deno.land/x/hono@v3.12.2/",
     "lume/": "https://deno.land/x/lume@v2.0.3/",
     "lume_theme_shiraha/jsx-runtime": "./jsx-runtime.ts"
   }

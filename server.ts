@@ -1,4 +1,15 @@
-import { Hono, serveStatic } from './deps/hono_server.ts'
+let Hono, serveStatic
+
+try {
+  const mod = await import('hono/mod.ts')
+  const adapter = await import('hono/adapter/deno/serve-static.ts')
+  Hono = mod.Hono
+  serveStatic = adapter.serveStatic
+} catch {
+  const deps = await import('./deps/hono_server.ts')
+  Hono = deps.Hono
+  serveStatic = deps.serveStatic
+}
 
 const server = new Hono()
   .get('*', serveStatic({ root: './site' }))
