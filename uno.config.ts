@@ -8,8 +8,12 @@ export default {
     presetTypography({
       cssExtend: {
         'h1,h2,h3,h4,h5,h6': {
-          'font-weight': 700,
+          'color': 'var(--md-sys-color-on-surface)',
+          'font-weight': 600,
           'text-wrap': 'balance',
+        },
+        'h6': {
+          'opacity': '0.38',
         },
         'p': {
           'color': 'var(--md-sys-color-on-surface-variant)',
@@ -29,12 +33,29 @@ export default {
         //   'text-decoration':
         //     'underline var(--md-sys-color-on-primary-container) 2px !important',
         // },
-        'mark,mark *': {
+        'mark': {
           'background-color': 'var(--md-sys-color-primary)',
           'color': 'var(--md-sys-color-on-primary)',
         },
         'pre': {
           'padding': '1.25rem 0',
+          'position': 'relative',
+          // 'margin': 0,
+          'overflow-y': 'hidden',
+        },
+        'pre:before': {
+          'color': 'var(--md-sys-color-surface-container-highest)',
+          'content': 'attr(data-language)',
+          'display': 'grid',
+          'line-height': 1,
+          'right': 0,
+          'top': 0,
+          'padding': '0.25rem',
+          'position': 'absolute',
+          'place-items': 'center',
+          'text-transform': 'uppercase',
+          'font-size': '0.875rem',
+          'font-weight': 600,
         },
         'pre,code': {
           'background-color': 'var(--md-sys-color-surface-container)',
