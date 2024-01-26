@@ -2,6 +2,7 @@ import { Hono, serveStatic } from './deps/hono_server.ts'
 
 const server = new Hono()
   .get('*', serveStatic({ root: './_site' }))
+  .notFound(({ redirect }) => redirect('/404.html', 307))
 
 if (import.meta.main) {
   const { parseArgs } = await import('lume/deps/cli.ts')
