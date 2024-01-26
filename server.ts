@@ -12,7 +12,7 @@ try {
 }
 
 const server = new Hono()
-  .get('*', serveStatic({ root: './site' }))
+  .get('*', serveStatic({ root: './_site' }))
 
 if (import.meta.main) {
   const { parseArgs } = await import('lume/deps/cli.ts')
