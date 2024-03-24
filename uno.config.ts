@@ -4,7 +4,8 @@ import { presetTypography } from 'npm:@unocss/preset-typography@0.58.6'
 
 export default {
   presets: [
-    presetUno(),
+    // deno-lint-ignore no-explicit-any
+    presetUno() as any,
     presetTypography({
       cssExtend: {
         'h1,h2,h3,h4,h5,h6': {
