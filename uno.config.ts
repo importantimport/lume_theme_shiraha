@@ -1,4 +1,5 @@
 import { presetUno } from 'lume/deps/unocss.ts'
+import { presetIcons } from 'npm:@unocss/preset-icons'
 import type { UserConfig } from 'npm:@unocss/core@0.58.6'
 import { presetTypography } from 'npm:@unocss/preset-typography@0.58.6'
 
@@ -6,6 +7,7 @@ export default {
   presets: [
     // deno-lint-ignore no-explicit-any
     presetUno() as any,
+    presetIcons({ cdn: 'https://esm.sh/' }),
     presetTypography({
       cssExtend: {
         'h1,h2,h3,h4,h5,h6': {
@@ -103,6 +105,7 @@ export default {
       errorcontainer: 'var(--md-sys-color-error-container)',
       onerrorcontainer: 'var(--md-sys-color-on-error-container)',
       outline: 'var(--md-sys-color-outline)',
+      outlineVariant: 'var(--md-sys-color-outline-variant)',
       background: 'var(--md-sys-color-background)',
       onbackground: 'var(--md-sys-color-on-background)',
       surface: 'var(--md-sys-color-surface)',

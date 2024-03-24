@@ -1,5 +1,5 @@
 export const layout = 'layouts/body.tsx'
-export default ({ comp: { Container }, results }: Lume.Data, { slug }: Lume.Helpers) => (
+export default ({ comp: { Container, Pagination }, pagination, results }: Lume.Data, { slug }: Lume.Helpers) => (
   <Container>
     {/* TODO: p-name, u-url, u-photo */}
     <ol class="list-none pl-0">
@@ -19,5 +19,6 @@ export default ({ comp: { Container }, results }: Lume.Data, { slug }: Lume.Help
         </li>
       ))}
     </ol>
+    <Pagination pagination={pagination} />
   </Container>
 )
