@@ -8,12 +8,11 @@ export const clean = (obj: Record<string, unknown>) =>
       .sort(([keyA], [keyB]) => keyA.localeCompare(keyB)),
   )
 
-/** @see {@link https://github.com/lumeland/lume/blob/main/plugins/feed.ts} */
-export const generateJson = async (
+export const generateObject = async (
   data: Lume.Data,
   { md, url, htmlUrl }: Lume.Helpers,
 ) =>
-  JSON.stringify(clean({
+  clean({
     version: 'https://jsonfeed.org/version/1.1',
     title: data.lts.site.title,
     home_page_url: url('', true),
@@ -43,4 +42,10 @@ export const generateJson = async (
         })
       ) as object[],
     ),
-  }))
+  })
+
+/** @see {@link https://github.com/lumeland/lume/blob/main/plugins/feed.ts} */
+export const generateJson = async (
+  data: Lume.Data,
+  helpers: Lume.Helpers,
+) => JSON.stringify(await generateObject(data, helpers))
