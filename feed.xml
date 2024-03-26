@@ -6,13 +6,22 @@
   <link rel="self" type="application/atom+xml" href="https://lume.shiraha.js.org/feed.xml"/>
   <link rel="alternate" type="application/json" href="https://lume.shiraha.js.org/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://lume.shiraha.js.org/"/>
+  <author>
+    <name>John Doe</name>
+    <uri>https://example.com</uri>
+  </author>
   <generator uri="https://github.com/bcomnes/jsonfeed-to-atom#readme" version="1.2.4">jsonfeed-to-atom</generator>
+  <rights>© 2024 John Doe</rights>
   <subtitle>Material 3-inspired Lume Blog Theme.</subtitle>
   <entry>
     <id>https://lume.shiraha.js.org/articles/highlight-playground/</id>
     <title>LTS Highlight Playground</title>
     <updated>2024-01-26T12:22:18.000Z</updated>
     <published>2024-01-26T12:06:01.000Z</published>
+    <author>
+      <name>John Doe</name>
+      <uri>https://example.com</uri>
+    </author>
     <content type="html"><![CDATA[<h2 id="rehype-pretty-code"><a aria-hidden="true" tabindex="-1" href="#rehype-pretty-code"><span class="icon icon-link"></span></a>Rehype Pretty Code</h2>
 <h3 id="highlight-lines"><a aria-hidden="true" tabindex="-1" href="#highlight-lines"><span class="icon icon-link"></span></a><a href="https://rehype-pretty-code.netlify.app/#highlight-lines">Highlight Lines</a></h3>
 <figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="ts" data-theme="github-light github-dark"><code data-language="ts" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">import</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> { useFloating } </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">from</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> '@floating-ui/react'</span></span>
@@ -144,6 +153,10 @@ All other strings are considered decimal.</span></span></div></span>arseInt</spa
     <title>Gettings Started</title>
     <updated>2023-12-13T09:23:12.000Z</updated>
     <published>2023-12-11T11:46:40.000Z</published>
+    <author>
+      <name>John Doe</name>
+      <uri>https://example.com</uri>
+    </author>
     <content type="html"><![CDATA[<p><a href="https://unsplash.com/photos/a-close-up-of-a-snowflake-on-a-blue-background-wD6dXl47YlQ"><img src="https://images.unsplash.com/photo-1632683353128-1d02d43cfdd4?w=720" alt="Photo by Holly Greene"></a></p>
 <!-- [![Photo by Kelly Sikkema](https://images.unsplash.com/photo-1478265409131-1f65c88f965c?w=720)](https://unsplash.com/photos/hSPVuakrJqs) -->
 <p>Welcome! Here is the demo and documentation for Lume Theme Shiraha.</p>
@@ -159,6 +172,10 @@ All other strings are considered decimal.</span></span></div></span>arseInt</spa
     <title>Part 2: Writing</title>
     <updated>2023-12-11T11:46:40.000Z</updated>
     <published>2023-06-14T14:17:25.000Z</published>
+    <author>
+      <name>John Doe</name>
+      <uri>https://example.com</uri>
+    </author>
     <content type="html"><![CDATA[<p>It’s time to create your first article!</p>
 <p>Here I use <a href="https://lume.land/docs/core/archetypes/#run-archetypes">lume cli</a> to create the posts, you can also create the files manually.</p>
 <figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">deno</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> task lume new article my-first-article</span></span></code></pre></figure>
@@ -184,6 +201,10 @@ All other strings are considered decimal.</span></span></div></span>arseInt</spa
     <title>Part 1: Installation</title>
     <updated>2023-12-11T11:46:40.000Z</updated>
     <published>2023-05-30T14:30:26.000Z</published>
+    <author>
+      <name>John Doe</name>
+      <uri>https://example.com</uri>
+    </author>
     <content type="html"><![CDATA[<h2 id="setup-deno--lume"><a aria-hidden="true" tabindex="-1" href="#setup-deno--lume"><span class="icon icon-link"></span></a>Setup Deno &#x26; Lume</h2>
 <p>As this is a Lume theme, please follow the <a href="https://deno.com/manual@v1.34.2/getting_started/installation">Deno installation instructions</a> and <a href="https://lume.land/docs/overview/installation/">Lume documentation</a> to install them first.</p>
 <h2 id="install-lume-theme-shiraha"><a aria-hidden="true" tabindex="-1" href="#install-lume-theme-shiraha"><span class="icon icon-link"></span></a>Install Lume Theme Shiraha</h2>
@@ -203,6 +224,10 @@ All other strings are considered decimal.</span></span></div></span>arseInt</spa
     <title>Typography should be easy.</title>
     <updated>2023-12-13T09:23:12.000Z</updated>
     <published>2023-05-29T08:02:13.000Z</published>
+    <author>
+      <name>John Doe</name>
+      <uri>https://example.com</uri>
+    </author>
     <content type="html"><![CDATA[<p className="lead">
   Until now, trying to style an article, document, or blog post with Tailwind has been a tedious
   task that required a keen eye for typography and a lot of complex custom CSS.
