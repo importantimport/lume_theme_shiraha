@@ -43,6 +43,7 @@ export default {
         },
         'pre': {
           'padding': '1.25rem 0',
+          'position': 'relative',
           // 'margin': 0,
           'overflow-y': 'hidden',
         },
