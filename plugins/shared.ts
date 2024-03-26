@@ -7,6 +7,7 @@ import readInfo from './patched/reading_info.ts'
 // import { getGitDate } from 'lume/core/utils/date.ts'
 // import filterPages from 'lume/plugins/filter_pages.ts'
 import metas from 'lume/plugins/metas.ts'
+import fff from 'lume/plugins/fff.ts'
 // import date from 'lume/plugins/date.ts'
 import sitemap from 'lume/plugins/sitemap.ts'
 import minifyHTML from 'lume/plugins/minify_html.ts'
@@ -35,6 +36,10 @@ export default () => (site: Lume.Site) =>
     }))
     .use(readInfo())
     .use(metas())
+    .use(fff({
+      date: 'created', // TODO: published
+      getGitDate: true,
+    }))
     // .use(date())
     .use(sitemap())
     .use(unocss({
