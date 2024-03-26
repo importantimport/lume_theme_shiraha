@@ -1,6 +1,6 @@
 export default ({ pagination }: Lume.Data, {}: Lume.Helpers) => (
   <>
-    {pagination && (
+    {pagination && pagination?.totalPages > 1 && (
       <nav>
         <ul class='flex gap-4 p-0 children:p-2 justify-between border-t-1 border-outline-variant list-none'>
           <li>
