@@ -1,9 +1,13 @@
-export default ({ tags }: Lume.Data, { url }: Lume.Helpers) => (
+export default ({ tags, url: dataUrl }: Lume.Data, { slug, url }: Lume.Helpers) => (
   <>
-    {tags.map(tag => (
-      <a class="p-category" href={url(`/t/${encodeURIComponent(tag)}`)}>
-        #{tag}
-      </a>
-    ))}
+    {tags.length > 0 && (
+      <div class="flex flex-wrap gap-2 mt-8 lts-tags" style={`--name: article-tags-${slug(dataUrl)}`}>
+        {tags.map(tag => (
+          <a class="p-category" href={url(`/t/${encodeURIComponent(tag)}`)}>
+            #{tag}
+          </a>
+        ))}
+      </div>
+    )}
   </>
 )
