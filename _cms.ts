@@ -1,13 +1,10 @@
 import lumeCMS from 'lume/cms.ts'
 
-export default lumeCMS({
-  site: {
-    name: 'Lume Theme Shiraha',
-  },
-})
-  .versioning('main')
+export default lumeCMS()
   .upload('uploads', 'src:public')
-  .collection('articles', 'src:articles/*.md', [
+  // TODO:
+  // .document('Settings', 'src:_data.yml', [])
+  .collection('Articles', 'src:articles/*.md', [
     'title: text',
     // 'date: date',
     'summary: text',
