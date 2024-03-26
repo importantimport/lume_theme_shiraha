@@ -33,12 +33,14 @@ export const includes = src('/_includes/', [
   'layouts/article.tsx',
   'layouts/body.tsx',
   'layouts/feed.json.ts',
+  'layouts/feed.xml.ts',
   'styles/theme.dark.css',
   'styles/theme.light.css',
 ])
 
 export const pages = src('/', [
   'index.feed.json.page.ts',
+  'index.feed.xml.page.ts',
   'index.page.ts',
   'styles.css',
   // '404.md',
