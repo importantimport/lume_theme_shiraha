@@ -20,12 +20,9 @@ export const components = src('/_components/', [
   'tags.tsx',
 ])
 
-export const data = src('/_data/', [
-  // '_data/authors.yml',
-  // '_data/date.yml',
-  // '_data/metas.yml',
-  // '_data/shiraha.yml',
-  'metas.yml',
+export const data = src('/', [
+  '_data/metas.yml',
+  'articles/_data.yml',
 ])
 
 export const includes = src('/_includes/', [
