@@ -1,4 +1,0 @@
-site: '=site.title'
-title: '=title'
-description: '=summary'
-image: '=image'
