@@ -159,6 +159,7 @@ section a > [data-rehype-pretty-code-figure] > code > span {
 } */
 
 .prose a:hover,
+.prose a:hover > :where(h2),
 .prose a:hover > [data-rehype-pretty-code-figure] > code > span {
   color: var(--md-sys-color-on-primary-container);
   background-position-x: left;
