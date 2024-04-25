@@ -2,8 +2,8 @@ export const layout = 'layouts/body.tsx'
 export default ({ children, comp: { Container, Tags }, date, title, url: dataUrl, readingInfo, tags }: Lume.Data, { url, slug }: Lume.Helpers) => (
   <Container className="h-entry">
     <article>
-      <a class="u-author" href={url('/')}></a>
       <a class="u-url" value={url(dataUrl, true)}></a>
+      <a class="u-author" rel="author" href={url('/')}></a>
       <h1 class="p-name" style={`--name: article-title-${slug(dataUrl)}`}>{title}</h1>
       <p class="lts-date" style={`--name: article-date-${slug(dataUrl)}`}>
         <time class="dt-published" datetime={date.toISOString()}>
