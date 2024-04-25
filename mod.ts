@@ -16,6 +16,7 @@ export const components = src('/_components/', [
   'footer.tsx',
   'head.tsx',
   'header.tsx',
+  'hero.tsx',
   'pagination.tsx',
   'tags.tsx',
 ])
