@@ -5,7 +5,7 @@ export default ({ children, comp: { Head }, head, lts, title }: Lume.Data, {}: L
       {head?.metas?.map((meta, key) => (<meta key={key} {...meta} />))}
       {head?.links?.map((link, key) => (<link key={key} {...link} />))}
     </Head>
-    <body class="prose max-w-none bg-surface color-onsurface">
+    <body class="prose max-w-none bg-surface color-on-surface">
       {children}
     </body>
   </html>

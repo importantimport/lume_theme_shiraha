@@ -31,7 +31,7 @@ export default () => (site: Lume.Site) =>
     }))
     .use(jsx())
     .use(theme({
-      color: '#6750a4',
+      color: '#099ad9',
       filename: '/styles/tokens.css',
     }))
     .use(readInfo())

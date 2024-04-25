@@ -11,7 +11,7 @@ export default ({ pagination }: Lume.Data, {}: Lume.Helpers) => (
                 </a>
               )
               : (
-                <a rel='prev' class='color-onsurface opacity-38' disabled>
+                <a rel='prev' class='color-on-surface opacity-38' disabled>
                   <span class='i-material-symbols:arrow-back'>prev</span>
                 </a>
               )}
@@ -27,7 +27,7 @@ export default ({ pagination }: Lume.Data, {}: Lume.Helpers) => (
                 </a>
               )
               : (
-                <a rel='next' class='color-onsurface opacity-38' disabled>
+                <a rel='next' class='color-on-surface opacity-38' disabled>
                   <span class='i-material-symbols:arrow-forward'>next</span>
                 </a>
               )}
