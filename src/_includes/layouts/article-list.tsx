@@ -7,7 +7,7 @@ export default ({ comp: { Container, Hero, Pagination }, pagination, results, ur
       {results?.map((data) => (
         <li>
           <a class="no-underline" href={data.url}>
-            <h2 class="p-name" style={`--name: article-title-${slug(data.url)}`}>
+            <h2 class="p-name transition" style={`--name: article-title-${slug(data.url)}`}>
               {data.title ?? 'no title'}
             </h2>
             <p class="lts-date" style={`--name: article-date-${slug(data.url)}`}>
