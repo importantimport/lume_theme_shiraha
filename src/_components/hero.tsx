@@ -1,5 +1,5 @@
 export default ({ lts }: Lume.Data, { url }: Lume.Helpers) => (
-  <div class="p-author h-card flex flex-col gap-4 children:m-0">
+  <div class="p-author h-card flex flex-col my-4 gap-4 children:m-0">
     <data class="u-photo hidden" value={lts.author.avatar} />
     <data class="p-name hidden" value={lts.author.name} />
     <data class="u-uid u-url hidden" value={url('/')} />
