@@ -21,14 +21,7 @@ export default () => (site: Lume.Site) =>
   site
     .use(html())
     .use(slug())
-    // TODO: move to mod.ts
-    .use(data({
-      // author: {
-      //   avatar: 'https://kwaa.dev/assets/maskable@192.webp',
-      //   name: '藍+85CD',
-      //   url: 'https://kwaa.dev',
-      // },
-    }))
+    .use(data())
     .use(jsx())
     .use(theme({
       color: '#099ad9',

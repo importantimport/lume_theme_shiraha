@@ -22,6 +22,7 @@ export const components = src('/_components/', [
 ])
 
 export const data = src('/', [
+  '_data/lts.yml',
   '_data/metas.yml',
   'articles/_data.yml',
 ])
