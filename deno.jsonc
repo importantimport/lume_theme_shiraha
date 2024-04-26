@@ -2,7 +2,7 @@
   "lock": false,
   "importMap": "import_map.json",
   "tasks": {
-    "lume": "echo \"import 'lume/cli.ts'\" | deno run --unstable -A -",
+    "lume": "echo \"import 'lume/cli.ts'\" | deno run --unstable-ffi -A -",
     "build": "deno task lume",
     "serve": "deno task lume -s"
   },
@@ -16,9 +16,7 @@
     ]
   },
   "lint": {
-    "files": {
-      "exclude": ["./_site", "./_bin", "./src/articles"]
-    }
+    "exclude": ["./_site", "./_bin", "./src/articles"]
   },
   "fmt": {
     "semiColons": false,
