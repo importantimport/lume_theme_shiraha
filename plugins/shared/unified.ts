@@ -1,6 +1,5 @@
 import type { PluggableList } from 'lume/deps/remark.ts'
 // remark plugins
-import remarkFFF from 'npm:remark-fff@1.2.1'
 import remarkSmartyPants from 'npm:remark-smartypants@2.1.0'
 // rehype plugins
 import rehypeSlug from 'npm:rehype-slug@5.1.0'
@@ -11,13 +10,6 @@ import rehypePrettyCode from 'npm:rehype-pretty-code@0.12.6'
 import { transformerTwoslash } from 'npm:shikiji-twoslash@0.10.1'
 
 export const remarkPlugins: PluggableList = [
-  [
-    remarkFFF,
-    {
-      presets: [],
-      target: 'nuxt',
-    },
-  ],
   remarkSmartyPants,
 ]
 
