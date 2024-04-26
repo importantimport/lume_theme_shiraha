@@ -12,7 +12,7 @@ import fff from 'lume/plugins/fff.ts'
 import sitemap from 'lume/plugins/sitemap.ts'
 import minifyHTML from 'lume/plugins/minify_html.ts'
 // import nav from 'lume/plugins/nav.ts'
-// import pagefind from 'lume/plugins/pagefind.ts'
+import pagefind from 'lume/plugins/pagefind.ts'
 import unocss from 'lume/plugins/unocss.ts'
 import options from '../uno.config.ts'
 import lightningcss from 'lume/plugins/lightningcss.ts'
@@ -49,8 +49,8 @@ export default () => (site: Lume.Site) =>
     }))
     .use(lightningcss())
     .use(minifyHTML({ extensions: ['.html', '.css', '.js'] }))
-// .use(nav())
-// .use(pagefind())
+    // .use(nav())
+    .use(pagefind({ outputPath: '/search' }))
 // .preprocess(['.md'], (pages) =>
 //   pages.forEach((page) => {
 //     page.data.excerpt ??= (page.data.content as string).split(
