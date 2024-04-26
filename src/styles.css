@@ -34,14 +34,6 @@ body {
     view-transition-name: root;
   }
 
-  header {
-    view-transition-name: header;
-  }
-
-  footer {
-    view-transition-name: footer;
-  }
-
   .p-name,
   .p-summary,
   .e-content,
