@@ -3,11 +3,11 @@ export default ({ comp: { Container, Hero, Pagination }, pagination, results, ur
   <Container>
     {url === '/' && <Hero />}
     {/* TODO: p-name, u-url, u-photo */}
-    <ol class="flex flex-col gap-6 list-none pl-0 my-0">
+    <ol class="flex flex-col gap-8 list-none pl-0 my-0">
       {results?.map((data) => (
         <li>
           <a class="no-underline" href={data.url}>
-            <h2 class="p-name mt-4 transition" style={`--name: article-title-${slug(data.url)}`}>
+            <h2 class="p-name m-0 transition" style={`--name: article-title-${slug(data.url)}`}>
               {data.title ?? 'no title'}
             </h2>
             <p class="lts-date" style={`--name: article-date-${slug(data.url)}`}>
