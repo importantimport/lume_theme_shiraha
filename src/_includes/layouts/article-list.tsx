@@ -1,7 +1,8 @@
 export const layout = 'layouts/body.tsx'
-export default ({ comp: { Container, Hero, Pagination }, pagination, results, url }: Lume.Data, { slug }: Lume.Helpers) => (
+export default ({ comp: { Container, Hero, Pagination, Posts }, pagination, results, url }: Lume.Data, { slug }: Lume.Helpers) => (
   <Container>
     {url === '/' && <Hero />}
+    <Posts />
     {/* TODO: p-name, u-url, u-photo */}
     <ol class="flex flex-col gap-8 list-none pl-0 my-0">
       {results?.map((data) => (
