@@ -37,7 +37,7 @@ const defaults: LTSData = {
         href: 'https://deno.land/x/lume_theme_shiraha',
       },
       {
-        href: 'https://shiraha.js.org/ve',
+        href: 'https://lume.land/theme/shiraha',
       },
     ],
   },
