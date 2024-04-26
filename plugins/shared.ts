@@ -50,7 +50,10 @@ export default () => (site: Lume.Site) =>
     .use(lightningcss())
     .use(minifyHTML({ extensions: ['.html', '.css', '.js'] }))
     // .use(nav())
-    .use(pagefind({ outputPath: '/search' }))
+    .use(pagefind({
+      outputPath: '/search',
+      ui: { resetStyles: false },
+    }))
 // .preprocess(['.md'], (pages) =>
 //   pages.forEach((page) => {
 //     page.data.excerpt ??= (page.data.content as string).split(
