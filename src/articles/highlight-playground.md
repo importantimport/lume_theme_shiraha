@@ -10,7 +10,7 @@ tags:
 
 ### [Highlight Lines](https://rehype-pretty-code.netlify.app/#highlight-lines)
 
-```ts {4}
+```tsx {4}
 import { useFloating } from '@floating-ui/react'
 
 function MyComponent() {
@@ -27,7 +27,7 @@ function MyComponent() {
 
 ### [Group Highlighted Lines By Id](https://rehype-pretty-code.netlify.app/#group-highlighted-lines-by-id)
 
-```ts {1}#a {4}#b
+```tsx {1}#a {4}#b
 import { useFloating } from '@floating-ui/react'
 
 function MyComponent() {
