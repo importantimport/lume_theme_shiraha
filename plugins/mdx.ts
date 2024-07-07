@@ -1,5 +1,6 @@
 import mdx from 'lume/plugins/mdx.ts'
-import { rehypePlugins, remarkPlugins } from './shared/unified.ts'
+import { remarkPlugins } from './unified/remark.ts'
+import { rehypePlugins } from './unified/rehype.ts'
 
 export default () => (site: Lume.Site) =>
   site
