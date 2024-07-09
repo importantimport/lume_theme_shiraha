@@ -3,6 +3,6 @@ import minifyHTML from 'lume/plugins/minify_html.ts'
 
 /** @see {@link https://lume.land/plugins/?status=disabled&html=on} */
 export const html = () => (site: Lume.Site) =>
-    site
-        .use(metas())
-        .use(minifyHTML({ extensions: ['.html', '.css', '.js'] }))
+  site
+    .use(metas())
+    .use(minifyHTML({ extensions: ['.html', '.css', '.js'] }))
