@@ -12,9 +12,9 @@ export default () => (site: Lume.Site) =>
         ['.html'],
         async (pages) => {
             await Promise.all(pages.map(async (page) => {
-                const document = page.document!
-
-                for await (const img of document.querySelectorAll('img')) {
+                for await (
+                    const img of page.document!.querySelectorAll('img')
+                ) {
                     if (img.src) {
                         const arr = await read(page.data.image, true)
                         const image = new Image(arr)
