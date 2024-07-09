@@ -9,7 +9,7 @@
 
 /* https://github.com/oscarotero/semantic-html/blob/master/html/page.md#main-element */
 @media print {
-  body > *:not(main) {
+  body>*:not(main) {
     display: none;
   }
 }
@@ -17,12 +17,21 @@
 body {
   overflow-y: scroll;
   /* https://github.com/oscarotero/css-style-guide/tree/master/cases/notch */
-  padding: env(safe-area-inset-top) env(safe-area-inset-right)
-    env(safe-area-inset-bottom) env(safe-area-inset-left);
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
   scrollbar-color: var(--md-sys-color-on-surface) var(--md-sys-color-surface);
   scrollbar-gutter: stable both-edges !important;
   scrollbar-width: thin;
   text-wrap: pretty;
+}
+
+@media screen and (max-width: 768px) {
+  pre {
+    padding: 2rem 0;
+
+    & code span[data-line] {
+      padding: 0 2rem;
+    }
+  }
 }
 
 @media not (prefers-reduced-motion: reduce) {
@@ -58,7 +67,7 @@ body {
 }
 
 figure[data-rehype-pretty-code-figure] {
-  & > figcaption[data-rehype-pretty-code-title] {
+  &>figcaption[data-rehype-pretty-code-title] {
     background-color: var(--md-sys-color-surface-container-high);
     border-top-left-radius: 0.375rem;
     border-top-right-radius: 0.375rem;
@@ -66,7 +75,8 @@ figure[data-rehype-pretty-code-figure] {
     padding: 0.25rem 0.5rem 0.5rem 0.5rem;
     margin-bottom: -1.25rem;
   }
-  & > figcaption[data-rehype-pretty-code-caption] {
+
+  &>figcaption[data-rehype-pretty-code-caption] {
     background-color: var(--md-sys-color-surface-container-high);
     border-bottom-left-radius: 0.375rem;
     border-bottom-right-radius: 0.375rem;
@@ -81,7 +91,7 @@ code[data-line-numbers] {
   counter-reset: line;
 }
 
-code[data-line-numbers] > [data-line]::before {
+code[data-line-numbers]>[data-line]::before {
   counter-increment: line;
   content: counter(line);
   color: var(--md-sys-color-on-surface-variant);
@@ -100,15 +110,15 @@ mark[data-highlighted-chars] {
 }
 
 /* rehype-autolink-headings */
-section > :is(h1, h2, h3, h4, h5, h6) {
+section> :is(h1, h2, h3, h4, h5, h6) {
   position: relative;
   scroll-margin: 2rem;
 
-  &:hover > a:has(.icon.icon-link)::before {
+  &:hover>a:has(.icon.icon-link)::before {
     color: var(--md-sys-color-primary);
   }
 
-  & > a:has(.icon.icon-link) {
+  &>a:has(.icon.icon-link) {
     position: absolute;
     top: 0;
     left: 0;
@@ -127,20 +137,13 @@ section > :is(h1, h2, h3, h4, h5, h6) {
   }
 }
 
-section
-  a:not(
-    :has(h1, h2, h3, h4, h5, h6, [data-rehype-pretty-code-figure]),
-    [aria-hidden='true']
-  ),
-section a > [data-rehype-pretty-code-figure] > code > span {
-  background: linear-gradient(
-      0deg,
+section a:not( :has(h1, h2, h3, h4, h5, h6, [data-rehype-pretty-code-figure]),
+  [aria-hidden='true']),
+section a>[data-rehype-pretty-code-figure]>code>span {
+  background: linear-gradient(0deg,
       var(--md-sys-color-on-primary-container),
-      var(--md-sys-color-on-primary-container)
-    )
-    no-repeat right bottom / 0 0.125em;
-  transition: background-size 400ms
-    var(--md-sys-motion-easing-emphasized-decelerate);
+      var(--md-sys-color-on-primary-container)) no-repeat right bottom / 0 0.125em;
+  transition: background-size 400ms var(--md-sys-motion-easing-emphasized-decelerate);
 }
 
 /* .prose a {
@@ -151,8 +154,8 @@ section a > [data-rehype-pretty-code-figure] > code > span {
 } */
 
 .prose a:hover,
-.prose a:hover > :where(h2),
-.prose a:hover > [data-rehype-pretty-code-figure] > code > span {
+.prose a:hover> :where(h2),
+.prose a:hover>[data-rehype-pretty-code-figure]>code>span {
   color: var(--md-sys-color-on-primary-container);
   background-position-x: left;
   background-size: 100% 0.125em;
