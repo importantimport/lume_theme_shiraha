@@ -1,10 +1,10 @@
 import type { PluggableList } from 'lume/deps/remark.ts'
 import rehypeSlug from 'npm:rehype-slug@5.1.0'
 import rehypeAutolinkHeadings from 'npm:rehype-autolink-headings@7.1.0'
-import rehypePrettyCode from 'npm:rehype-pretty-code@0.12.6'
-// shikiji transformers
-// import { transformerNotationDiff } from 'npm:shikiji-transformers@0.10.1'
-import { transformerTwoslash } from 'npm:shikiji-twoslash@0.10.1'
+import rehypePrettyCode from 'npm:rehype-pretty-code@0.13.2'
+// shiki transformers
+import { transformerNotationDiff } from 'npm:@shikijs/transformers@1.10.3'
+import { transformerTwoslash } from 'npm:@shikijs/twoslash@1.10.3'
 
 export const rehypePlugins: PluggableList = [
   // deno-lint-ignore no-explicit-any
@@ -22,11 +22,11 @@ export const rehypePlugins: PluggableList = [
         dark: 'github-dark',
       },
       transformers: [
-        // transformerNotationDiff(),
-        transformerTwoslash(),
-        // transformerTwoslash({
-        //   explicitTrigger: true,
-        // }),
+        transformerNotationDiff(),
+        transformerTwoslash({
+          cache: undefined,
+          explicitTrigger: true,
+        }),
       ],
     },
   ],
