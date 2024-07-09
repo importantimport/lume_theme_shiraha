@@ -26,7 +26,7 @@ body {
 
 @media screen and (max-width: 768px) {
   pre {
-    padding: 2rem 0;
+    margin: 0 -2rem;
 
     & code span[data-line] {
       padding: 0 2rem;
