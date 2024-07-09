@@ -5,6 +5,7 @@ import rehypePrettyCode from 'npm:rehype-pretty-code@0.13.2'
 // shiki transformers
 import { transformerNotationDiff } from 'npm:@shikijs/transformers@1.10.3'
 import { transformerTwoslash } from 'npm:@shikijs/twoslash@1.10.3'
+import { transformerCopyButton } from 'npm:@rehype-pretty/transformers@0.13.2'
 
 export const rehypePlugins: PluggableList = [
   // deno-lint-ignore no-explicit-any
@@ -27,6 +28,7 @@ export const rehypePlugins: PluggableList = [
           cache: undefined,
           explicitTrigger: true,
         }),
+        transformerCopyButton(),
       ],
     },
   ],
