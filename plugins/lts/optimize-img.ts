@@ -12,17 +12,20 @@ export default () => (site: Lume.Site) =>
         ['.html'],
         async (pages) => {
             await Promise.all(pages.map(async (page) => {
-                for await (
-                    const img of page.document!.querySelectorAll('img')
-                ) {
+                const { document } = page
+                if (!document) return
+
+                const images = document.querySelectorAll('img')
+
+                for await (const img of Array.from(images)) {
                     if (img.src) {
-                        const arr = await read(page.data.image, true)
+                        const arr = await read(img.src, true)
                         const image = new Image(arr)
 
                         // set height, width
                         const { height, width } = image
-                        img.setAttribute('height', height.toString())
-                        img.setAttribute('width', width.toString())
+                        img.setAttribute('height', String(height))
+                        img.setAttribute('width', String(width))
 
                         // generate thumbhash
                         // https://github.com/evanw/thumbhash/blob/main/examples/browser/index.html
@@ -54,6 +57,8 @@ export default () => (site: Lume.Site) =>
                             String.fromCharCode(...binaryThumbHash),
                         )
                         img.setAttribute('data-thumbhash', base64Thumbhash)
+
+                        img.replaceWith(img)
                     }
                 }
             }))
