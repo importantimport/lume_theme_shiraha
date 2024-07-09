@@ -25,11 +25,15 @@ export default () => (site: Lume.Site) =>
           // set height, width
           img.setAttribute('height', String(image.height))
           img.setAttribute('width', String(image.width))
-          console.log(
-            `size for ${img.src}: height=${image.height} width=${image.width}`,
-          )
 
-          // generate thumbhash
+          // set loading=lazy, decoding=async
+          img.setAttribute('loading', 'lazy')
+          img.setAttribute('decoding', 'async')
+
+          // set data-sizes=auto (unlazy)
+          img.setAttribute('data-sizes', 'auto')
+
+          // set data-thumbhash (unlazy)
           // https://github.com/evanw/thumbhash/blob/main/examples/browser/index.html
           const scale = 100 / Math.max(image.width, image.height)
           const canvas = createCanvas(
@@ -58,7 +62,6 @@ export default () => (site: Lume.Site) =>
           const base64Thumbhash = btoa(
             String.fromCharCode(...binaryThumbHash),
           )
-          console.log(`thumbhash for ${img.src}: ${base64Thumbhash}`)
           img.setAttribute('data-thumbhash', base64Thumbhash)
         }
       }))
