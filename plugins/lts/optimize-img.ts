@@ -16,14 +16,18 @@ export default () => (site: Lume.Site) =>
         if (!document) return
 
         for await (const img of Array.from(document.querySelectorAll('img'))) {
-          const arr = await read(img.src, true)
+          const src = img.getAttribute('src')
+          if (!src) return
+
+          const arr = await read(src, true)
           const image = new Image(arr)
 
           // set height, width
-          const { height, width } = image
-          img.setAttribute('height', String(height))
-          img.setAttribute('width', String(width))
-          console.log(`size for ${img.src}: height=${height} width=${width}`)
+          img.setAttribute('height', String(image.height))
+          img.setAttribute('width', String(image.width))
+          console.log(
+            `size for ${img.src}: height=${image.height} width=${image.width}`,
+          )
 
           // generate thumbhash
           // https://github.com/evanw/thumbhash/blob/main/examples/browser/index.html
