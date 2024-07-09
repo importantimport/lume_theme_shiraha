@@ -44,7 +44,7 @@ export default {
         'pre': {
           'padding': '0.75rem 0',
           'position': 'relative',
-          // 'margin': 0,
+          'margin': '-2rem',
           'overflow-y': 'hidden',
         },
         'pre,code': {
@@ -55,7 +55,7 @@ export default {
         //   padding: '1.25rem 0',
         // },
         'pre code span[data-line]': {
-          'padding': '0 0.75rem',
+          'padding': '0 2rem',
         },
         ':not(pre) > code': {
           'padding': '0.25rem 0.375rem',

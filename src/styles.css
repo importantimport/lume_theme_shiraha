@@ -24,17 +24,6 @@ body {
   text-wrap: pretty;
 }
 
-@media screen and (min-width: 768px) {
-  pre {
-    border-radius: 0 !important;
-    margin: 0 -2rem !important;
-
-    & code span[data-line] {
-      padding: 0 2rem !important;
-    }
-  }
-}
-
 @media not (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: smooth;
@@ -70,21 +59,21 @@ body {
 figure[data-rehype-pretty-code-figure] {
   &>figcaption[data-rehype-pretty-code-title] {
     background-color: var(--md-sys-color-surface-container-high);
-    border-top-left-radius: 0.375rem;
-    border-top-right-radius: 0.375rem;
     color: var(--md-sys-color-on-surface-variant);
     padding: 0.25rem 0.5rem 0.5rem 0.5rem;
     margin-bottom: -1.25rem;
+    margin-left: -2rem;
+    margin-right: -2rem;
   }
 
   &>figcaption[data-rehype-pretty-code-caption] {
     background-color: var(--md-sys-color-surface-container-high);
-    border-bottom-left-radius: 0.375rem;
-    border-bottom-right-radius: 0.375rem;
     color: var(--md-sys-color-on-surface-variant);
     padding: 0.5rem 0.5rem 0.25rem 0.5rem;
     margin-top: -1.25rem;
     margin-bottom: 1.25rem;
+    margin-left: -2rem;
+    margin-right: -2rem;
   }
 }
 
