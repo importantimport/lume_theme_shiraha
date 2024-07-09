@@ -57,8 +57,6 @@ export default () => (site: Lume.Site) =>
               String.fromCharCode(...binaryThumbHash),
             )
             img.setAttribute('data-thumbhash', base64Thumbhash)
-
-            img.replaceWith(img)
           }
         }
       }))
