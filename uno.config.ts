@@ -42,7 +42,7 @@ export default {
           'color': 'var(--md-sys-color-on-primary)',
         },
         'pre': {
-          'padding': '1.25rem 0',
+          'padding': '0.75rem 0',
           'position': 'relative',
           // 'margin': 0,
           'overflow-y': 'hidden',
@@ -55,8 +55,7 @@ export default {
         //   padding: '1.25rem 0',
         // },
         'pre code span[data-line]': {
-          // 'padding': '0 1.5rem',
-          'padding': '0 1.25rem',
+          'padding': '0 0.75rem',
         },
         ':not(pre) > code': {
           'padding': '0.25rem 0.375rem',
