@@ -33,6 +33,9 @@ export default () => (site: Lume.Site) =>
           // set data-sizes=auto (unlazy)
           img.setAttribute('data-sizes', 'auto')
 
+          // set data-src (unlazy)
+          img.setAttribute('data-src', src)
+
           // set data-thumbhash (unlazy)
           // https://github.com/evanw/thumbhash/blob/main/examples/browser/index.html
           const scale = 100 / Math.max(image.width, image.height)
