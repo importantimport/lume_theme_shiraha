@@ -10,10 +10,7 @@ import {
 
 import { type Scheme, scheme } from 'npm:mcu-extra@0.1.1'
 
-import {
-  createCanvas,
-  Image,
-} from 'https://deno.land/x/skia_canvas@0.5.5/mod.ts'
+import { createCanvas, Image } from '../../../deps/skia_canvas.ts'
 
 export type Theme = {
   dark: Scheme

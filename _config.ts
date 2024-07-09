@@ -3,6 +3,8 @@ import lume from 'lume/mod.ts'
 import sharedPlugins from './plugins/shared.ts'
 import remarkPlugins from './plugins/remark.ts'
 // import multilanguage from 'lume/plugins/multilanguage.ts'
+// Experimental
+import optimizeImg from './plugins/lts/optimize-img.ts'
 
 const site = lume({
   src: './src',
@@ -10,6 +12,8 @@ const site = lume({
 }, { markdown: {} })
   .use(sharedPlugins())
   .use(remarkPlugins())
+  // Experimental
+  .use(optimizeImg())
 // .use(
 //   multilanguage({
 //     languages: ['en', 'zh', 'ja'],
