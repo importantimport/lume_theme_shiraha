@@ -13,6 +13,8 @@ export default ({ children }: Lume.Data, { url }: Lume.Helpers) => (
         listen()
       </script>`} */}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/shikiji-twoslash@0.10.1/style-rich.min.css" />
+    {/** @see {@link https://unlazy.byjohann.dev/guide/installation.html#without-a-build-step} */}
+    <script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>
     {children}
   </head>
 )
