@@ -42,9 +42,10 @@ export default {
           'color': 'var(--md-sys-color-on-primary)',
         },
         'pre': {
+          'border-radius': 0,
           'padding': '0.75rem 0',
           'position': 'relative',
-          'margin': '-2rem',
+          'margin': '0 -2rem',
           'overflow-y': 'hidden',
         },
         'pre,code': {
