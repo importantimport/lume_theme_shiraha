@@ -24,12 +24,12 @@ body {
   text-wrap: pretty;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   pre {
-    margin: 0 -2rem;
+    margin: 0 -2rem !important;
 
     & code span[data-line] {
-      padding: 0 2rem;
+      padding: 0 2rem !important;
     }
   }
 }
