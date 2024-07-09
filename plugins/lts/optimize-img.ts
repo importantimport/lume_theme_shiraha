@@ -7,7 +7,7 @@ import { createCanvas, Image } from '../../deps/skia_canvas.ts'
 /**
  * Optimize Image Plugin
  */
-export default () => (site: Lume.Site) => {
+export default () => (site: Lume.Site) =>
     site.process(
         ['.html'],
         async (pages) => {
@@ -59,4 +59,3 @@ export default () => (site: Lume.Site) => {
             }))
         },
     )
-}
