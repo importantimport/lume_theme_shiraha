@@ -273,11 +273,11 @@ layout: layouts/article.tmpl.ts
 <p>I assume you already know what Frontmatter is.</p>
 <p>Here you can use the <a href="https://lume.land/docs/creating-pages/page-data/#standard-variables">Lume Standard Variables</a> and part of the <a href="https://fff.js.org/version/1.0.html">FFF Flavored Frontmatter</a> (depending on the progress of theme development, most will be supported eventually)</p>
 <p>For example, to change the generated directory without changing the filename:</p>
-<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="diff" data-theme="github-light github-dark"><code data-language="diff" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;--shiki-light-font-weight:bold;--shiki-dark-font-weight:bold">---</span></span>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="diff" data-theme="github-light github-dark"><code data-language="diff" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold">---</span></span>
 <span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">title: my-first-article</span></span>
 <span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">layout: layouts/article.tmpl.ts</span></span>
 <span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">+ url: /</span><mark data-highlighted-chars=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">articles</span></mark><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">/my-second-article/index.html</span></span>
-<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;--shiki-light-font-weight:bold;--shiki-dark-font-weight:bold">---</span></span><button type="button" title="Copy code" aria-label="Copy code" data="---
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold">---</span></span><button type="button" title="Copy code" aria-label="Copy code" data="---
 title: my-first-article
 layout: layouts/article.tmpl.ts
 + url: /articles/my-second-article/index.html
