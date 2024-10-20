@@ -1,4 +1,4 @@
-import lumeCMS from 'lume/cms.ts'
+import lumeCMS from 'lume/cms/mod.ts'
 import { fffPreset } from './cms/fff.ts'
 import { data } from './cms/data.ts'
 
